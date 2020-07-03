@@ -21,7 +21,7 @@ export default class App extends Component {
         {/* <NavBar /> */}
 
         {/* Пример кнопки которая переходит уже по ссылке */}
-        {/* <GeneralButton exact link='/origins' buttonName='Origins' /> */}
+        {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
 
         <Route exact path="/" component={Home} />
         {/* <Route path="/origins" component={Origins} />
