@@ -13,13 +13,20 @@ export default class NavBar extends Component {
 
   render() {
     return (
-      <ul className="navigation">
-        {this.navbar.map((item) => {
-          return (
-            <NavItem itemName={item.itemName} key={item.id} url={item.url} />
-          );
-        })}
-      </ul>
+      <div className="container">
+        <ul className="navigation">
+          {this.navbar.map((item) => {
+            return (
+              <NavItem itemName={item.itemName} key={item.id} url={item.url} />
+            );
+          })}
+        </ul>
+        <img
+          src={require("./NavBarPictures/logo.svg")}
+          alt=""
+          className="logo"
+        />
+      </div>
     );
   }
 }
