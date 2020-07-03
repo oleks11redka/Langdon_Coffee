@@ -9,6 +9,7 @@ import WorkingWithLcm from '../pages/WorkingWithLcm/WorkingWithLcm'
 import News from '../pages/News/News'
 import Article from '../pages/Article/Article'
 import Footer from '../pages/Footer/Footer'
+import WorkInProgress from '../pages/WorkInProgress/WorkInProgress'
 import GeneralButton from '../elements/GeneralButton/GeneralButton'
 
 import './App.scss'
@@ -17,13 +18,13 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-      <p>Hello</p>
         {/* <NavBar /> */}
 
         {/* Пример кнопки которая переходит уже по ссылке */}
         {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
 
         <Route exact path="/" component={Home} />
+        <Route exact path="/work-in-progress" component={WorkInProgress} />
         {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
