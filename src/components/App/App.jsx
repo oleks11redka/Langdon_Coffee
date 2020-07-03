@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "../elements/NavBar/NavBar";
 import Home from "../pages/Home/Home";
 import Origins from "../pages/Origins/Origins";
 import ContactUs from "../pages/ContactUs/ContactUs";
@@ -11,6 +10,7 @@ import Article from "../pages/Article/Article";
 import WorkInProgress from "../pages/WorkInProgress/WorkInProgress";
 import Footer from "../elements/Footer/Footer";
 import GeneralButton from "../elements/GeneralButton/GeneralButton";
+import NavBar from "../elements/NavBar/NavBar";
 
 import "./App.scss";
 
