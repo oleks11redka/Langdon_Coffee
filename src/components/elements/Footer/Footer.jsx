@@ -26,7 +26,7 @@ export default class Footer extends Component {
                         {/* Добавлю чуть позже */}
                     </div>
                     <div className='footer__copyright'>
-                        <p className='footer__copyrightText'></p>
+                        <p className='footer__copyrightText'>COPYRIGHT © 2017 LANGDON COFFEE MERCHANTS</p>
                     </div>
                 </div>
             </div>
