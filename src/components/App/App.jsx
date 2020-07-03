@@ -17,15 +17,14 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <p>Hello</p>
+      <p>Hello</p>
+        {/* <NavBar /> */}
+
         {/* Пример кнопки которая переходит уже по ссылке */}
-        
-        {/* <GeneralButton link='/origins' buttonName='Hey-hey' /> */}
+        {/* <GeneralButton exact link='/origins' buttonName='Origins' /> */}
 
-
-        {/* <NavBar />
-        <Route path="/" component={Home} />
-        <Route path="/origins" component={Origins} />
+        <Route exact path="/" component={Home} />
+        {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
         <Route path="/working-with-lcm" component={WorkingWithLcm} />
