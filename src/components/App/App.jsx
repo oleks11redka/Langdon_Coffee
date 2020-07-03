@@ -9,15 +9,20 @@ import WorkingWithLcm from '../pages/WorkingWithLcm/WorkingWithLcm'
 import News from '../pages/News/News'
 import Article from '../pages/Article/Article'
 import Footer from '../pages/Footer/Footer'
+import GeneralButton from '../elements/GeneralButton/GeneralButton'
 
-
-
+import './App.scss'
 
 export default class App extends Component {
   render() {
     return (
       <Router>
         <p>Hello</p>
+        {/* Пример кнопки которая переходит уже по ссылке */}
+        
+        {/* <GeneralButton link='/origins' buttonName='Hey-hey' /> */}
+
+
         {/* <NavBar />
         <Route path="/" component={Home} />
         <Route path="/origins" component={Origins} />
