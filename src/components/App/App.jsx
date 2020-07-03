@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "../pages/NavBar/NavBar";
+import NavBar from "../elements/NavBar/NavBar";
 import Home from "../pages/Home/Home";
 import Origins from "../pages/Origins/Origins";
 import ContactUs from "../pages/ContactUs/ContactUs";
@@ -18,7 +18,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        {/* <NavBar /> */}
+        <NavBar />
 
         {/* Пример кнопки которая переходит уже по ссылке */}
         {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
