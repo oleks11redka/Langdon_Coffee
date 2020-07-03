@@ -5,6 +5,7 @@ import OurOffering from '../../elements/OurOffering/OurOffering'
 import Instagram from '../../elements/Instagram/Instagram'
 
 import './Home.scss'
+import InTheNews from '../../elements/InTheNews/InTheNews'
 
 export default class Home extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class Home extends Component {
             <MainHeader />
             <WhoWeAre />
             <OurOffering />
+            <InTheNews />
             <Instagram />
         </div>
       )
