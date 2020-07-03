@@ -8,8 +8,8 @@ import AboutLcm from '../pages/AboutLcm/AboutLcm'
 import WorkingWithLcm from '../pages/WorkingWithLcm/WorkingWithLcm'
 import News from '../pages/News/News'
 import Article from '../pages/Article/Article'
-import Footer from '../pages/Footer/Footer'
 import WorkInProgress from '../pages/WorkInProgress/WorkInProgress'
+import Footer from '../elements/Footer/Footer'
 import GeneralButton from '../elements/GeneralButton/GeneralButton'
 
 import './App.scss'
@@ -30,8 +30,8 @@ export default class App extends Component {
         <Route path="/about-lcm" component={AboutLcm} />
         <Route path="/working-with-lcm" component={WorkingWithLcm} />
         <Route path="/news" component={News} />
-        <Route path="/news/:id" component={Article} />
-        <Footer /> */}
+        <Route path="/news/:id" component={Article} /> */}
+        <Footer />
       </Router>
     )
   }
