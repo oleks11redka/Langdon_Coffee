@@ -2,21 +2,20 @@ import React, { Component } from 'react'
 
 import './ShortDescArticle.scss'
 
-import Footer from './Footer.png'
-
 export default class ShortDescArticle extends Component {
     state = {
         category: 'food',
         title: 'Hello',
         text: 'lorem ipsum',
-        image: Footer,
+        image: './Footer.png',
     }
 
     render() {
-        let { category, title, text, image } = this.state
+        let { category, title, text, image } = this.props
+        let requiredImage = require(`${image}`)
       return (
         <div className='shortDescArticle'>
-            <div className='shortDescArticle__photo' style={{backgroundImage: `url(${image})`}}>
+            <div className='shortDescArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
                 <p className='shortDescArticle__category'>{category}</p>
             </div>
             <div className='shortDescArticle__info'>
