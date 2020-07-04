@@ -1,3 +1,14 @@
-.logo {
+.main-logo {
   background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation {
+  position: relative;
+  background: #13322b;
+  &-bar {
+    display: flex;
+  }
 }

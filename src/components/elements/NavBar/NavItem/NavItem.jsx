@@ -7,7 +7,9 @@ export default class NavItem extends Component {
     let { itemName, url } = this.props;
     return (
       <li className="navigation__item">
-        <Link to={url}>{itemName}</Link>
+        <Link className="navigation__link" to={url}>
+          {itemName}
+        </Link>
       </li>
     );
   }
