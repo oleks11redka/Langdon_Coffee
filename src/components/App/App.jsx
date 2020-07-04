@@ -15,6 +15,9 @@ import NavBar from "../elements/NavBar/NavBar";
 import "./App.scss";
 
 export default class App extends Component {
+  state = {
+    name: "crazy"
+  }
   render() {
     return (
       <Router>
@@ -23,7 +26,7 @@ export default class App extends Component {
         {/* Пример кнопки которая переходит уже по ссылке */}
         {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
 
-        <Route exact path="/" component={Home} />
+        <Route name={this.state.name} exact path="/" component={Home} />
         <Route exact path="/work-in-progress" component={WorkInProgress} />
         {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />

@@ -14,10 +14,10 @@ export default class Footer extends Component {
                         <img src={require('./FooterPictures/Footer.png')} alt='Main header title' className='footer__title' />
                     </div>
                     <div className='footer__navigation'>
-                        <ul>
-                            <li><Link to='/work-in-progress'>Privacy policy</Link></li>
-                            <li><Link to='/work-in-progress'>Sales terms &amp; conditions</Link></li>
-                            <li><Link to='/work-in-progress'>contact us</Link></li>
+                        <ul className='footer__navigation-list'>
+                            <li className='footer__navigation-link'><Link to='/work-in-progress'>Privacy policy</Link></li>
+                            <li className='footer__navigation-link'><Link to='/work-in-progress'>Sales terms &amp; conditions</Link></li>
+                            <li className='footer__navigation-link'><Link to='/work-in-progress'>contact us</Link></li>
                         </ul>
                     </div>
                 </div>
