@@ -14,10 +14,19 @@ import NavBar from "../elements/NavBar/NavBar";
 import "./App.scss";
 
 export default class App extends Component {
+  
   state = {
-    name: "crazy"
+    newsInfo: [
+      {category: 'food', title: 'Hello', text: 'lorem ipsum', image: './Footer.png', key:'1'},
+      {category: 'whatever', title: 'Bye', text: 'lorem ipsum', image: './MainHeaderBackground.png', key:'2'},
+      {category: 'okay', title: 'Hey-hey', text: 'lorem ipsum', image: './Footer.png', key:'3'},
+      {category: 'interesting', title: 'Bye-bye', text: 'lorem ipsum', image: './MainHeaderBackground.png', key:'4'},
+      {category: 'idontcare', title: 'Mkay', text: 'lorem ipsum', image: './Footer.png', key:'5'},
+    ],
   }
+
   render() {
+    let { newsInfo } = this.state
     return (
       <Router>
         <NavBar />
@@ -25,9 +34,9 @@ export default class App extends Component {
         {/* Пример кнопки которая переходит уже по ссылке */}
         {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
 
-        <Route name={this.state.name} exact path="/" component={Home} />
+        <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route exact path="/work-in-progress" component={WorkInProgress} />
-        <Route path="/news" component={News} />
+        <Route path="/news"  component={News} />
         {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
