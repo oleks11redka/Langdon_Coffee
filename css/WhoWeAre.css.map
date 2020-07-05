@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/elements/WhoWeAre/WhoWeAre.scss"
+    ],
+    "names": [],
+    "file": "WhoWeAre.css"
+}

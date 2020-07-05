@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/pages/WorkInProgress/WorkInProgress.scss"
+    ],
+    "names": [],
+    "file": "WorkInProgress.css"
+}

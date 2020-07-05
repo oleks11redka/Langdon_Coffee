@@ -1,0 +1,104 @@
+.footer {
+  text-transform: uppercase;
+  background: #13322b;
+  font-family: D-DIN Condensed;
+  letter-spacing: -0.013em;
+}
+
+.footer__container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+}
+
+.footer__withElem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__leftSide {
+  width: 55%;
+}
+
+.footer__title {
+  width: 100%;
+  max-height: 330px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__list-item {
+  margin-right: 24px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #EEA9B5;
+}
+
+.footer__rightSide {
+  width: 45%;
+}
+
+.footer__logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 24px;
+}
+
+.footer__logos--langdon {
+  max-width: 131px;
+  max-height: 41px;
+  margin-right: 50px;
+}
+
+.footer__logos--bakery {
+  max-width: 147px;
+  max-height: 39px;
+  margin-right: 50px;
+}
+
+.footer__logos--natural {
+  max-width: 44px;
+  max-height: 42px;
+  margin-right: 50px;
+}
+
+.footer__logos--henry {
+  max-width: 142px;
+  max-height: 32px;
+}
+
+.footer__copyright {
+  margin-top: 26px;
+}
+
+.footer__copyrightText {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .footer__withElem {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */
