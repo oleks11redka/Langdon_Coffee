@@ -22,7 +22,7 @@ export default class App extends Component {
       {category: 'okay', title: 'Hey-hey', text: 'lorem ipsum', image: './Footer.png', key:'3'},
       {category: 'interesting', title: 'Bye-bye', text: 'lorem ipsum', image: './MainHeaderBackground.png', key:'4'},
       {category: 'idontcare', title: 'Mkay', text: 'lorem ipsum', image: './Footer.png', key:'5'},
-    ],
+    ]
   }
 
   render() {
