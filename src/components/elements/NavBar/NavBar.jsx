@@ -17,6 +17,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <div className="navigation">
+        <div className="marina">Maryna</div>
         <div className="container">
           <ul className="navigation-bar">
             {this.state.navbar.map((item) => {
