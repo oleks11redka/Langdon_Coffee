@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/elements/InTheNews/InTheNews.scss"
+    ],
+    "names": [],
+    "file": "InTheNews.css"
+}

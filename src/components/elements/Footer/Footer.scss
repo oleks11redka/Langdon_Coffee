@@ -1,0 +1,112 @@
+.footer {
+    text-transform: uppercase;
+    background: #13322b;
+    font-family: D-DIN Condensed;
+    letter-spacing: -0.013em;
+
+    &__container {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 20px;        
+    }
+
+    &__picture {
+
+    }
+
+    &__withElem {        
+        display: flex;
+    }
+
+    &__leftSide {
+        width: 55%;
+    }
+
+    &__pictureTitle {
+
+    }
+
+    &__title {
+        width: 100%;
+        max-height: 330px;
+    }
+
+    &__navigation {
+
+    }
+
+    &__list {
+        display: flex;
+
+        &-item {
+            margin-right: 24px;
+            margin-bottom: 24px;
+            margin-top: 8px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #EEA9B5;
+    }
+
+    &__rightSide {
+        width: 45%;
+
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        &--langdon {
+            max-width: 131px;
+            max-height: 41px;
+            margin-right: 50px;
+        }
+
+        &--bakery {
+            max-width: 147px;
+            max-height: 39px;
+            margin-right: 50px;
+        }
+
+        &--natural {
+            max-width: 44px;
+            max-height: 42px;
+            margin-right: 50px;
+        }
+
+        &--henry {
+            max-width: 142px;
+            max-height: 32px;
+        }
+
+
+    }
+    
+    &__copyright {
+        margin-top: 26px;
+    }
+
+    &__copyrightText {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #fff;
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .footer__withElem {        
+        display: block;
+}
+}

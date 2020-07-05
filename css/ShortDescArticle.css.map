@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,wBAAwB,CAAC;EACrB,eAAe,EAAE,KAAK;EACtB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "../src/components/elements/ShortDescArticle/ShortDescArticle.scss"
+    ],
+    "names": [],
+    "file": "ShortDescArticle.css"
+}
