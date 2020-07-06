@@ -8,7 +8,7 @@ export default class InTheNews extends Component {
       let { newsInfo } = this.props
       return (
         <div className='InTheNews'>
-           {newsInfo.map((article) => {
+           {(newsInfo.slice(-4)).map((article) => {
               return (
                 <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} />
               );
