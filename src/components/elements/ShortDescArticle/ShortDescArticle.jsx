@@ -3,13 +3,6 @@ import React, { Component } from 'react'
 import './ShortDescArticle.scss'
 
 export default class ShortDescArticle extends Component {
-    state = {
-        category: 'food',
-        title: 'Hello',
-        text: 'lorem ipsum',
-        image: './Footer.png',
-    }
-
     render() {
         let { category, title, text, image } = this.props
         let requiredImage = require(`${image}`)

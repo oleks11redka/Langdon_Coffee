@@ -36,12 +36,12 @@ export default class App extends Component {
 
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route exact path="/work-in-progress" component={WorkInProgress} />
-        <Route path="/news"  component={News} />
+        <Route path="/news"  render={() => <News newsInfo={newsInfo} />} />
         {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
         <Route path="/working-with-lcm" component={WorkingWithLcm} />
-        <Route path="/news/:id" component={Article} /> */}
+        <Route path="/news/:id" render={() => <SingleArticle newsInfo={newsInfo} /> */}
         <Footer />
       </Router>
     );
