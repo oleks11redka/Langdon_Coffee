@@ -15,7 +15,6 @@ import SingleArticle from "../pages/SingleArticle/SingleArticle";
 import "./App.scss";
 
 export default class App extends Component {
-  
   state = {
     newsInfo: [
       {category: 'food', title: 'Hello', text: 'lorem ipsum', image: './Footer.png', key: '1', id: '1'},
@@ -27,7 +26,7 @@ export default class App extends Component {
   }
 
   render() {
-    let { newsInfo } = this.state
+    let { newsInfo } = this.state;
     return (
       <Router>
         <NavBar />
