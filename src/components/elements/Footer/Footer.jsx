@@ -22,7 +22,7 @@ export default class Footer extends Component {
 
             <div className="footer__navigation">
               <div className="footer__img-box">
-                <img src={require("./FooterPictures/footer-left-text.png")} alt="big langdon" className="footer__picture" />
+                <img src={require("./FooterPictures/big.svg")} alt="big langdon" className="footer__picture" />
               </div>
               <ul className="footer__list">
                 <li className="footer__list-item">
@@ -42,10 +42,10 @@ export default class Footer extends Component {
           {/* right part of footer */}
           <div className="footer__rightSide">
             <div className="footer__logos">
-              <img src={require("./FooterPictures/langdon ingredients.png")} alt="logo langdon" className="footer__logos--langdon" />
-              <img src={require("./FooterPictures/bakery-craft.png")} alt="logo bakery" className="footer__logos--bakery" />
-              <img src={require("./FooterPictures/natural.png")} alt="logo natural" className="footer__logos--natural" />
-              <img src={require("./FooterPictures/HenryLangdonV2-01 1.png")} alt="logo henry" className="footer__logos--henry" />
+              <img src={require("./FooterPictures/first.svg")} alt="logo langdon" className="footer__logos--langdon" />
+              <img src={require("./FooterPictures/second.svg")} alt="logo bakery" className="footer__logos--bakery" />
+              <img src={require("./FooterPictures/third.svg")} alt="logo natural" className="footer__logos--natural" />
+              <img src={require("./FooterPictures/fourth.svg")} alt="logo henry" className="footer__logos--henry" />
             </div>
             <div className="footer__copyright">
               <p className="footer__copyrightText">
