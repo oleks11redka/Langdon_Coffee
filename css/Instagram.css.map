@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../src/components/elements/Instagram/Instagram.scss"
-    ],
-    "names": [],
-    "file": "Instagram.css"
-}

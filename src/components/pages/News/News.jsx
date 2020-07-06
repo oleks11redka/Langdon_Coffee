@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 
 import './News.scss'
 
-import ShortDescArticle from '../../elements/ShortDescArticle/ShortDescArticle'
+import NewsArticlePreview from '../../elements/NewsArticlePreview/NewsArticlePreview'
 
 export default class News extends Component {
     render() {
+      let { newsInfo } = this.props
       return (
-        <div className='news'>
-            <ShortDescArticle />
-        </div>
+        <NewsArticlePreview newsInfo={newsInfo} />
       )
     }
 }

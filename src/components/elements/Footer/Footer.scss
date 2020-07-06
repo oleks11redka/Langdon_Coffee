@@ -3,15 +3,15 @@
     background: #13322b;
     font-family: D-DIN Condensed;
     letter-spacing: -0.013em;
+    max-width: 100%;
+    width: auto;
+
+    
 
     &__container {
         padding-left: 50px;
         padding-right: 50px;
         margin-top: 20px;        
-    }
-
-    &__picture {
-
     }
 
     &__withElem {        
@@ -22,17 +22,9 @@
         width: 55%;
     }
 
-    &__pictureTitle {
-
-    }
-
     &__title {
         width: 100%;
         max-height: 330px;
-    }
-
-    &__navigation {
-
     }
 
     &__list {
@@ -104,9 +96,55 @@
 
 }
 
+// for tablet screen
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 900px) {
     .footer__withElem {        
         display: block;
+    }
+
+    .footer__leftSide {
+        width: 100%; 
+    }
+
+    .footer__rightSide {
+        width: 100%;
+    }
 }
+
+// for Laptop screen
+@media screen and (max-width: 1024px) {
+
+    .footer {
+        max-width: 100%;
+        height: auto;
+
+
+        &__title {
+            width: auto;
+        }
+
+        &__logos--langdon {
+            max-width: 105px;
+            margin-right: 30px;
+        }
+
+        &__logos--bakery {
+            max-width: 110px;
+            margin-right: 32px;
+        }
+
+        &__logos--natural {
+            max-width: 36px;
+        }
+
+        &__logos--henry {
+            max-width: 113px;
+        }
+
+        &__copyright {
+            margin-top: 40px;
+        }
+    }
 }
+
