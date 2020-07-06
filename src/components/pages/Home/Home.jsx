@@ -15,7 +15,7 @@ export default class Home extends Component {
             <MainHeader />
             <WhoWeAre />
             <OurOffering />
-            <InTheNews newsInfo={newsInfo}/>
+            <InTheNews newsInfo={newsInfo} />
             <Instagram />
         </div>
       )

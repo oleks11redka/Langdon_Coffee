@@ -10,7 +10,7 @@ export default class InTheNews extends Component {
         <div className='InTheNews'>
            {(newsInfo.slice(-4)).map((article) => {
               return (
-                <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} />
+                <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.key} />
               );
             })}
         </div>
