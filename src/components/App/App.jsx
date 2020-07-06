@@ -14,19 +14,48 @@ import NavBar from "../elements/NavBar/NavBar";
 import "./App.scss";
 
 export default class App extends Component {
-  
   state = {
     newsInfo: [
-      {category: 'food', title: 'Hello', text: 'lorem ipsum', image: './Footer.png', key:'1'},
-      {category: 'whatever', title: 'Bye', text: 'lorem ipsum', image: './MainHeaderBackground.png', key:'2'},
-      {category: 'okay', title: 'Hey-hey', text: 'lorem ipsum', image: './Footer.png', key:'3'},
-      {category: 'interesting', title: 'Bye-bye', text: 'lorem ipsum', image: './MainHeaderBackground.png', key:'4'},
-      {category: 'idontcare', title: 'Mkay', text: 'lorem ipsum', image: './Footer.png', key:'5'},
-    ]
-  }
+      {
+        category: "food",
+        title: "Hello",
+        text: "lorem ipsum",
+        image: "./Footer.png",
+        key: "1",
+      },
+      {
+        category: "whatever",
+        title: "Bye",
+        text: "lorem ipsum",
+        image: "./MainHeaderBackground.png",
+        key: "2",
+      },
+      {
+        category: "okay",
+        title: "Hey-hey",
+        text: "lorem ipsum",
+        image: "./Footer.png",
+        key: "3",
+      },
+      {
+        category: "interesting",
+        title: "Bye-bye",
+        text: "lorem ipsum",
+        image: "./MainHeaderBackground.png",
+        key: "4",
+      },
+      {
+        category: "idontcare",
+        title: "Mkay",
+        text: "lorem ipsum",
+        image: "./Footer.png",
+        key: "5",
+      },
+    ],
+  };
 
   render() {
-    let { newsInfo } = this.state
+    let { newsInfo } = this.state;
     return (
       <Router>
         <NavBar />
@@ -36,9 +65,9 @@ export default class App extends Component {
 
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route exact path="/work-in-progress" component={WorkInProgress} />
-        <Route path="/news"  component={News} />
-        {/* <Route path="/origins" component={Origins} />
-        <Route path="/contact-us" component={ContactUs} />
+        <Route path="/news" component={News} />
+        <Route path="/origins" component={Origins} />
+        {/* <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
         <Route path="/working-with-lcm" component={WorkingWithLcm} />
         <Route path="/news/:id" component={Article} /> */}
