@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import './ShortDescArticle.scss'
 
-export default class ShortDescArticle extends Component {
+class ShortDescArticle extends Component {
     render() {
-        let { category, title, text, image, id } = this.props
+        let { category, title, text, image, history, id } = this.props
         let requiredImage = require(`${image}`)
       return (
         <div className='shortDescArticle'>
@@ -15,9 +15,13 @@ export default class ShortDescArticle extends Component {
             <div className='shortDescArticle__info'>
                 <h2 className='shortDescArticle__title'>{title}</h2>
                 <p className='shortDescArticle__text'>{text}</p>
-      <button className='shortDescArticle__arrowButton'>More {id}</button>
             </div>
+            <button onClick={() => {
+                    history.push('/news/' + id)
+                }}>Show</button>
         </div>
       )
     }
 }
+
+export default withRouter(ShortDescArticle)

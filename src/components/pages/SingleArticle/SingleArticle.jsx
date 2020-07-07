@@ -2,22 +2,22 @@ import React, { Component } from 'react'
 
 import './SingleArticle.scss'
 
+import ShortDescArticle from '../../elements/ShortDescArticle/ShortDescArticle';
+
 export default class SingleArticle extends Component {
     render() {
-        let { category, title, text, image } = this.props
-        let requiredImage = require(`${image}`)
+        let { newsInfo, articleId } = this.props
       return (
-        <div className='SingleArticle'>
-            <div className='SingleArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
-                <p className='SingleArticle__category'>{category}</p>
-            </div>
-            <div className='SingleArticle__info'>
-                <h2 className='SingleArticle__title'>{title}</h2>
-                <p className='SingleArticle__text'>{text}</p>
-                <button className='SingleArticle__arrowButton'>
-                    <svg></svg>
-                </button>
-            </div>
+        <div className='singleArticle'>
+          <div className='singleArticle__filterBar'>
+          </div>
+        {newsInfo.map((article) => {
+          if (article.id === `${articleId}`) {
+            return (
+              <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
+            );
+          }
+            })}
         </div>
       )
     }

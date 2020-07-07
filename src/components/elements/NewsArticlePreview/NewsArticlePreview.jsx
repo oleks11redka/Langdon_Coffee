@@ -10,7 +10,7 @@ export default class NewsArticlePreview extends Component {
         <div className='NewsArticlePreview'>
            {newsInfo.map((article) => {
               return (
-                <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.key} />
+                <ShortDescArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
               );
             })}
         </div>

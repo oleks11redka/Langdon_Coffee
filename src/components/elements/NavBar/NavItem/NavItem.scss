@@ -1,9 +1,23 @@
 .navigation__item {
   margin: 10px 20px;
+
 }
 
 .navigation__link {
   text-decoration: none;
   color: white;
   font-family: "DINCon";
+  transition: .3s;
+
+  &:active {
+    color: #EEA9B5;
+  }
+  
+  &:checked {
+    color: #EEA9B5;
+  }
+
+  &:hover {
+    color: #EEA9B5;
+  }
 }
