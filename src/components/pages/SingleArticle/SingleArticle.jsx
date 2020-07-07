@@ -8,7 +8,9 @@ export default class SingleArticle extends Component {
     render() {
         let { newsInfo, articleId } = this.props
       return (
-        <div className='SingleArticle'>
+        <div className='singleArticle'>
+          <div className='singleArticle__filterBar'>
+          </div>
         {newsInfo.map((article) => {
           if (article.id === `${articleId}`) {
             return (

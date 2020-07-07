@@ -15,10 +15,10 @@ class ShortDescArticle extends Component {
             <div className='shortDescArticle__info'>
                 <h2 className='shortDescArticle__title'>{title}</h2>
                 <p className='shortDescArticle__text'>{text}</p>
-                <button onClick={() => {
+            </div>
+            <button onClick={() => {
                     history.push('/news/' + id)
                 }}>Show</button>
-            </div>
         </div>
       )
     }
