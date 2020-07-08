@@ -9,11 +9,11 @@ export default class Footer extends Component {
       <div className="footer">
         {/* big picture for top */}
         <div className="footer__pictureTitle">
-          <img
+          {/* <img
             src={require("./FooterPictures/Footer.png")}
             alt="Main header title"
             className="footer__title"
-          />
+          /> */}
         </div>
         {/* footer content */}
         <div className="footer__withElem footer__container">

@@ -6,6 +6,13 @@
   max-width: 100%;
   width: auto;
 
+  &__pictureTitle {
+    background: url(./FooterPictures/image.svg) no-repeat;
+    background-size: cover;
+    height: 330px;
+    width: 100%;
+  }
+
   &__container {
     padding-left: 50px;
     padding-right: 50px;
@@ -91,7 +98,7 @@
 }
 
 // for tablet screen
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 767px) {
   .footer__withElem {
     display: block;
   }
@@ -106,7 +113,7 @@
 }
 
 // for Laptop screen
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .footer {
     max-width: 100%;
     height: auto;
@@ -116,21 +123,22 @@
     }
 
     &__logos--langdon {
-      max-width: 105px;
+      max-width: 85px;
       margin-right: 30px;
     }
 
     &__logos--bakery {
-      max-width: 110px;
-      margin-right: 32px;
+      max-width: 90px;
+      margin-right: 30px;
     }
 
     &__logos--natural {
-      max-width: 36px;
+      max-width: 32px;
+      margin-right: 30px;
     }
 
     &__logos--henry {
-      max-width: 113px;
+      max-width: 103px;
     }
 
     &__copyright {

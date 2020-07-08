@@ -1,0 +1,78 @@
+.whoWeAre {
+    display: flex;
+    background: #13322b;
+
+    &__picture {
+        background: url(./WhoWeArePictures/whoweare.svg) no-repeat;
+        background-size: cover;
+        width: 50%;
+        height: 710px;
+    }
+
+    &__description {
+        background: #13322b;
+        width: 50%;
+    }
+
+    &__title {
+        margin-top: 75px;
+        margin-left: 59px;
+        margin-bottom: 16px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        color: #fff;
+        font-family: D-DIN Condensed;
+    }
+
+    &__text {
+        margin-left: 59px;
+        text-align: left;
+        margin-bottom: 16px;
+        width: 472px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.013em;
+        color: #fff;
+        font-family: Source Sans Pro;
+    }
+}
+
+// for 4k screen 
+@media screen and (min-width: 3700px) and (max-width: 4200px) {
+    .whoWeAre {
+        &__picture {
+            height: auto;
+        }
+
+        &__title {
+            font-size: 98px;
+        }
+
+        &__text {
+            width: 70%;
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+}
+
+// for Medium screen
+@media screen and (min-width: 1024) and (max-width: 2048px) {
+
+}
+
+// for laptops screen
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+// for tablet screen
+@media screen and (min-width: 426px) and (max-width: 767px) {
+
+  }
+  
+
+  
