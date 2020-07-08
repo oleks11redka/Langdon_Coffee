@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { withRouter } from "react-router-dom";
 
-import './ShortDescArticle.scss'
+import './NewsArticle.scss'
 
-class ShortDescArticle extends Component {
+class NewsArticle extends Component {
     render() {
         let { category, title, text, image, history, id } = this.props
         let requiredImage = require(`${image}`)
+        
       return (
         <div className='shortDescArticle'>
             <div className='shortDescArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
@@ -24,4 +25,4 @@ class ShortDescArticle extends Component {
     }
 }
 
-export default withRouter(ShortDescArticle)
+export default withRouter(NewsArticle)
