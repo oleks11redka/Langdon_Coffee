@@ -4,6 +4,7 @@ import WhoWeAre from '../../elements/WhoWeAre/WhoWeAre'
 import OurOffering from '../../elements/OurOffering/OurOffering'
 import Instagram from '../../elements/Instagram/Instagram'
 import InTheNews from '../../elements/InTheNews/InTheNews'
+import NewsLetter from '../../elements/NewsLetter/NewsLetter'
 
 import './Home.scss'
 
@@ -16,6 +17,7 @@ export default class Home extends Component {
             <WhoWeAre />
             <OurOffering />
             <InTheNews newsInfo={newsInfo} />
+            <NewsLetter />
             <Instagram />
         </div>
       )
