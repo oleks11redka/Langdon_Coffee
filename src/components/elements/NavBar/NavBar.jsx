@@ -17,7 +17,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <div className="navigation">
-        <div className="container">
+        <div className="navigation__container">
           <ul className="navigation-bar">
             {this.state.navbar.map((item) => {
               return (
@@ -32,10 +32,18 @@ export default class NavBar extends Component {
           <Link to="./">
             <img
               src={require("./NavBarPictures/logo.svg")}
-              alt=""
+              alt="logo"
               className="main-logo"
             />
           </Link>
+          <Link to="./">
+            <img
+              src={require("./NavBarPictures/instagram.svg")}
+              alt="insta-img"
+              className="main-insta"
+            />
+          </Link>
+          
         </div>
       </div>
     );

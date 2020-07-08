@@ -1,150 +1,140 @@
 .footer {
-    text-transform: uppercase;
-    background: #13322b;
-    font-family: D-DIN Condensed;
-    letter-spacing: -0.013em;
-    max-width: 100%;
-    width: auto;
+  text-transform: uppercase;
+  background: #13322b;
+  font-family: D-DIN Condensed;
+  letter-spacing: -0.013em;
+  max-width: 100%;
+  width: auto;
 
-    
+  &__container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+  }
 
-    &__container {
-        padding-left: 50px;
-        padding-right: 50px;
-        margin-top: 20px;        
+  &__withElem {
+    display: flex;
+  }
+
+  &__leftSide {
+    width: 55%;
+  }
+
+  &__title {
+    width: 100%;
+    max-height: 330px;
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      margin-right: 24px;
+      margin-bottom: 24px;
+      margin-top: 8px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #eea9b5;
+  }
+
+  &__rightSide {
+    width: 45%;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    &--langdon {
+      max-width: 131px;
+      max-height: 41px;
+      margin-right: 50px;
     }
 
-    &__withElem {        
-        display: flex;
+    &--bakery {
+      max-width: 147px;
+      max-height: 39px;
+      margin-right: 50px;
     }
 
-    &__leftSide {
-        width: 55%;
+    &--natural {
+      max-width: 44px;
+      max-height: 42px;
+      margin-right: 50px;
     }
 
-    &__title {
-        width: 100%;
-        max-height: 330px;
+    &--henry {
+      max-width: 142px;
+      max-height: 32px;
     }
+  }
 
-    &__list {
-        display: flex;
+  &__copyright {
+    margin-top: 26px;
+  }
 
-        &-item {
-            margin-right: 24px;
-            margin-bottom: 24px;
-            margin-top: 8px;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        color: #EEA9B5;
-    }
-
-    &__rightSide {
-        width: 45%;
-
-    }
-
-    &__logos {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 24px;
-
-        &--langdon {
-            max-width: 131px;
-            max-height: 41px;
-            margin-right: 50px;
-        }
-
-        &--bakery {
-            max-width: 147px;
-            max-height: 39px;
-            margin-right: 50px;
-        }
-
-        &--natural {
-            max-width: 44px;
-            max-height: 42px;
-            margin-right: 50px;
-        }
-
-        &--henry {
-            max-width: 142px;
-            max-height: 32px;
-        }
-
-
-    }
-    
-    &__copyright {
-        margin-top: 26px;
-    }
-
-    &__copyrightText {
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: right;
-        color: #fff;
-    }
-
+  &__copyrightText {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    color: #fff;
+  }
 }
 
 // for tablet screen
 @media screen and (max-width: 768px) {
+  .footer__withElem {
+    display: block;
+  }
 
-    .footer__withElem {        
-        display: block;
-    }
+  .footer__leftSide {
+    width: 100%;
+  }
 
-    .footer__leftSide {
-        width: 100%; 
-    }
-
-    .footer__rightSide {
-        width: 100%;
-    }
+  .footer__rightSide {
+    width: 100%;
+  }
 }
 
 // for Laptop screen
 @media screen and (max-width: 1024px) {
+  .footer {
+    max-width: 100%;
+    height: auto;
 
-    .footer {
-        max-width: 100%;
-        height: auto;
-
-
-        &__title {
-            width: auto;
-        }
-
-        &__logos--langdon {
-            max-width: 105px;
-            margin-right: 30px;
-        }
-
-        &__logos--bakery {
-            max-width: 110px;
-            margin-right: 32px;
-        }
-
-        &__logos--natural {
-            max-width: 36px;
-        }
-
-        &__logos--henry {
-            max-width: 113px;
-        }
-
-        &__copyright {
-            margin-top: 40px;
-        }
+    &__title {
+      width: auto;
     }
-}
 
+    &__logos--langdon {
+      max-width: 105px;
+      margin-right: 30px;
+    }
+
+    &__logos--bakery {
+      max-width: 110px;
+      margin-right: 32px;
+    }
+
+    &__logos--natural {
+      max-width: 36px;
+    }
+
+    &__logos--henry {
+      max-width: 113px;
+    }
+
+    &__copyright {
+      margin-top: 40px;
+    }
+  }
+}

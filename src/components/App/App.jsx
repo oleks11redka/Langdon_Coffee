@@ -34,15 +34,18 @@ export default class App extends Component {
         {/* <GeneralButton exact link='/' buttonName='Origins' /> */}
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route path="/work-in-progress" component={WorkInProgress} />
-        <Route exact path="/news"  render={() => <News newsInfo={newsInfo} />} />
+        <Route exact path="/news" render={() => <News newsInfo={newsInfo} />} />
         {/* <Route path="/origins" component={Origins} />
         <Route path="/contact-us" component={ContactUs} />
         <Route path="/about-lcm" component={AboutLcm} />
         <Route path="/working-with-lcm" component={WorkingWithLcm} /> */}
-        <Route path="/news/:id"  render={({ match }) => {
-          let { id }= match.params
-          return <SingleArticle newsInfo={newsInfo} articleId={id} />
-        }} />
+        <Route
+          path="/news/:id"
+          render={({ match }) => {
+            let { id } = match.params;
+            return <SingleArticle newsInfo={newsInfo} articleId={id} />;
+          }}
+        />
         <Footer />
       </Router>
     );

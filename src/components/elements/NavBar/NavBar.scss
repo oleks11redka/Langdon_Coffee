@@ -1,14 +1,106 @@
 .main-logo {
-  background-color: black;
   position: absolute;
+  max-width: 131px;
+  max-height: 131px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateY(-10%);
+}
+
+.main-insta {
+  position: absolute;
+  max-width: 24px;
+  max-height: 24px;
+  left: 93.19%;
+  top: 35%;
+
+  &:hover {
+    fill: #EEA9B5;
+  }
 }
 
 .navigation {
   position: relative;
   background: #13322b;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 31px;
+  letter-spacing: 0.013em;
+
   &-bar {
     display: flex;
+  }
+
+  &__container {
+    margin-left: 54px;
+    margin-right: 34px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// for 4k screen 
+@media screen and (min-width: 3700px) and (max-width: 4200px) {
+  .navigation {
+    font-size: 42px;
+    height: 160px;
+  }
+
+  .main-logo {
+    max-width: 231px;
+    max-height: 231px; 
+    width: 231px;
+    height: 231px;
+    left: 50%;
+  }
+
+  .main-insta {
+    max-width: 48px;
+    max-height: 48px;
+    
+    width: 48px;
+    height: 48px;
+  }
+}
+
+// for Laptop screen
+@media screen and (max-width: 1200px) {
+  .navigation {
+    font-size: 16px;    
+  }
+
+  .main-logo {
+    max-width: 100px;
+    max-height: 100px; 
+    left: 60%;
+  }
+}
+
+// for tablet screen
+@media screen and (max-width: 930px) {
+  .navigation {
+    font-size: 16px;
+  }
+
+  .main-logo {
+    max-width: 100px;
+    max-height: 100px; 
+    left: 70%;
+  }
+}
+
+// for small tablet screen 
+@media screen and (max-width: 768px) {
+  .navigation {
+    font-size: 14px;
+  }
+
+  .main-logo {
+    max-width: 100px;
+    max-height: 100px; 
+    left: 74%;
   }
 }
