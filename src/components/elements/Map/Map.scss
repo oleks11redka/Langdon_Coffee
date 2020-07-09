@@ -1,12 +1,47 @@
 .map {
   margin-top: 150px;
   background: #f4f4f4;
+  text-align: center;
+
+  &__svg{
+    width: 100%;
+    height: 100% ;
+  }
 }
 
-.country {
-  fill: black;
+.country__color{
+  transition: .3s;
+  fill:#B56D6A;
+  cursor: pointer;
 }
+
+.country__name {
+  transition: .3s;
+  fill:#13322B;
+  cursor: pointer;
+  stroke: transparent;
+  stroke-width: 2px;
+}
+
 
 .country:hover {
-  fill: red;
+  .country__color {
+    fill:#730000;
+  }
+  .country__name {
+    fill:#e37371;
+  }
 }
+
+
+
+// #Frame_16 {
+//   pointer-events: bounding-box;
+//   opacity: 0.4;
+// }
+
+// #Frame_16:hover {
+//     opacity: 1;
+// }
+
+
