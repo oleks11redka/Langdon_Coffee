@@ -41,7 +41,7 @@
 }
 
 // for 4k screen 
-@media screen and (min-width: 3700px) and (max-width: 4200px) {
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
     .whoWeAre {
         &__picture {
             height: auto;
@@ -67,7 +67,7 @@
         }
 
         &__title {
-            max-width: 300px;
+            max-width: 400px;
         }
 
         &__text {
