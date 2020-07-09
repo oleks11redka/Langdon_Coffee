@@ -42,10 +42,16 @@ export default class Footer extends Component {
           {/* right part of footer */}
           <div className="footer__rightSide">
             <div className="footer__logos">
-              <img src={require("./FooterPictures/first.svg")} alt="logo langdon" className="footer__logos--langdon" />
-              <img src={require("./FooterPictures/second.svg")} alt="logo bakery" className="footer__logos--bakery" />
-              <img src={require("./FooterPictures/third.svg")} alt="logo natural" className="footer__logos--natural" />
-              <img src={require("./FooterPictures/fourth.svg")} alt="logo henry" className="footer__logos--henry" />
+              <div className="footer__logos--col">
+                <img src={require("./FooterPictures/first.svg")} alt="logo langdon" className="footer__logos--langdon" />
+                <img src={require("./FooterPictures/second.svg")} alt="logo bakery" className="footer__logos--bakery" />
+              </div>
+              <div className="footer__logos--col">
+                <img src={require("./FooterPictures/third.svg")} alt="logo natural" className="footer__logos--natural" />
+                <img src={require("./FooterPictures/fourth.svg")} alt="logo henry" className="footer__logos--henry" />
+              </div>
+
+
             </div>
             <div className="footer__copyright">
               <p className="footer__copyrightText">

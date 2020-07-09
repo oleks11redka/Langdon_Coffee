@@ -60,19 +60,39 @@
 }
 
 // for Medium screen
-@media screen and (min-width: 1024) and (max-width: 2048px) {
+@media screen and (min-width: 1024px) and (max-width: 2048px) {
+    .whoWeAre {
 
+        &__title {
+            max-width: 300px;
+        }
+
+        &__text {
+            max-width: 450px;
+        }
+    }
 }
 
 // for laptops screen
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .whoWeAre {
 
+        &__title {
+            max-width: 300px;
+            font-size: 52px;
+        }
+
+        &__text {
+            max-width: 314px;
+            font-size: 15px;
+        }
+
+        &__picture {
+            height: 760px;
+        }
+    }
 }
 
-// for tablet screen
-@media screen and (min-width: 426px) and (max-width: 767px) {
-
-  }
   
 
   
