@@ -1,0 +1,63 @@
+.ourOffering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F4F4F4;
+
+
+    &__title {
+        margin-top: 100px;
+        margin-bottom: 16px;
+        width: 420px;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+        font-family: D-DIN Condensed;
+    }
+
+    &__text {
+        width: 854px;
+        font-family: Source Sans Pro;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }
+}
+
+// for 4k 
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    .ourOffering {     
+        &__title {
+           font-size: 98px;
+           width: 840px;
+        }
+    
+        &__text {
+            font-size: 50px;
+            width: 1800px;
+            line-height: 58px;
+        }
+    }
+}
+
+// for medium screen  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .ourOffering {     
+        &__title {
+           font-size: 52px;
+           width: 400px;
+        }
+    
+        &__text {
+            font-size: 15px;
+            width: 600px;
+            line-height: 20px;
+        }
+    }
+}

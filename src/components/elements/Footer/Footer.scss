@@ -152,10 +152,41 @@
   }
 }
 
+// for 2k screen
+@media screen and (min-width: 2049px) and (max-width: 3700px) {
+  .footer__rightSide {
+    width: auto;
+  }
+
+  &__logos--langdon {
+    margin-right: 150px;
+  }
+
+  &__logos--bakery {
+    margin-right: 1px;
+  }
+
+  &__logos--natural {
+    margin-right: 30px;
+  }
+}
+
 // for medium screens
 @media screen and (min-width: 1024px) and (max-width: 2048px) {
   .footer__rightSide {
     width: auto;
+  }
+
+  &__logos--langdon {
+    margin-right: 150px;
+  }
+
+  &__logos--bakery {
+    margin-right: 30px;
+  }
+
+  &__logos--natural {
+    margin-right: 30px;
   }
 }
 
