@@ -28,6 +28,7 @@ export default class Origins extends Component {
         <Map />
         <OurCredentials />
         <CoffeeHarvestCalendar />
-      </div>);
+      </div>
+    )
   }
 }

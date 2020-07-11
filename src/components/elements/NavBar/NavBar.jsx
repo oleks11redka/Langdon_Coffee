@@ -6,7 +6,7 @@ import "./NavBar.scss";
 export default class NavBar extends Component {
   state = {
     navbar: [
-      { itemName: "about us", id: 1, url: "/about-us" },
+      { itemName: "about us", id: 1, url: "/about-lcm" },
       { itemName: "origins", id: 2, url: "/origins" },
       { itemName: "working with lcm", id: 3, url: "/working-with-lcm" },
       { itemName: "news", id: 4, url: "/news" },
