@@ -1,0 +1,46 @@
+.generalButton {
+    margin-left: 59px;
+    margin-top: 58px;
+    margin-bottom: 75px;
+    width: 194px;
+    height: 44px;
+    background: #EEA9B5;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "DINCon";
+    letter-spacing: -0.013em;
+    color: #fff;
+    transition: 0.4s;
+
+    &:hover {
+        background: #f1788c;
+        border: none;
+        color: #fff;
+    }
+
+    &:active {
+        background: #fff;
+        color: #EEA9B5;
+    }
+}
+
+
+// for 4k screen 
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    .generalButton {
+        width: 388px;
+        height: 88px;
+        border: 2px solid #FFFFFF;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+        

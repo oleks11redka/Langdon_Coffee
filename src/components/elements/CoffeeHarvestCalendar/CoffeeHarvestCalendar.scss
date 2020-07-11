@@ -1,0 +1,111 @@
+.CoffeeHarvestCalendar {
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 16px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+
+    &__text {
+        margin-bottom: 36px;
+        max-width: 854px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }
+// Calendar info and grafic
+    &__calendar {
+
+        &-info {
+            display: flex;
+            margin-bottom: 36px;
+        }
+
+        &-grafic {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__box {
+        &--red {
+            display: flex;
+            margin-right: 26px;
+
+        }
+
+        &--black {
+            display: flex;
+        }
+    }
+
+    &__red {
+        width: 20px;
+        height: 20px;
+        background: #E37371;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+
+    &__black {
+        width: 20px;
+        height: 20px;
+        background: #123011;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+
+    &__discription {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }    
+}
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .CoffeeHarvestCalendar__title {
+        font-size: 52px;
+    }
+
+    .CoffeeHarvestCalendar__text {
+        max-width: 500px;
+        font-size: 20px;
+    }
+
+    .CoffeeHarvestCalendar__calendar-grafic {
+        max-width: 500px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    
+    .CoffeeHarvestCalendar__title {
+        font-size: 98px;
+    }
+
+    .CoffeeHarvestCalendar__text {
+        max-width: 854px;
+        font-size: 36px;
+    }
+
+    .CoffeeHarvestCalendar__calendar-grafic {
+        max-width: 1500px;
+    }
+}

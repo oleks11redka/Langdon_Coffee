@@ -30,7 +30,7 @@
         font-size: 24px;
         line-height: 30px;
         letter-spacing: -0.013em;
-        font-family: Source Sans Pro;
+        font-family: 'Source Sans Pro', sans-serif;
         color: #13322B;
         margin-top: 100px;
         margin-bottom: 100px;
@@ -39,7 +39,7 @@
 
 
 // for 4k screen 
-@media screen and (min-width: 3700px) and (max-width: 4200px) {
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
     .mainHeader {
 
         &__title {
@@ -47,7 +47,7 @@
         }
 
         &__description {
-            width: 1400px;
+            width: 2054px;
             height: 400px;
             font-size: 64px;
             line-height: 70px;
@@ -55,6 +55,18 @@
             &-block {
                 height: 700px;
             }
+        }
+    }
+}
+
+// for Medium screen
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainHeader {
+
+        &__description {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-size: 20px;
         }
     }
 }

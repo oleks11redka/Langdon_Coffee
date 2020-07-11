@@ -1,0 +1,67 @@
+.origins {
+    background: #F4F4F4;
+    
+    &__title {
+        height: 385px;
+        background: url('./OriginsPictures/Mask\ Group.svg');
+        background-size: cover;
+
+        &-text {
+            width: auto;
+            padding-top: 198px;
+            margin-left: 55px;
+            margin-right: 53px;
+            padding-bottom: 25px;
+            font-family: 'DINCon';
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 101px;
+            letter-spacing: 0.013em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__info {
+        background: #13322B;
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        width: 854px;
+        height: 240px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #FFFFFF;
+    }
+}
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .origins__text {
+        width: 568px;
+        font-size: 20px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+
+    .origins__title-text {
+        font-size: 98px;
+    }
+
+    .origins__text {
+        width: 2000px;
+        font-size: 36px;
+        line-height: 45px;
+    }
+}
