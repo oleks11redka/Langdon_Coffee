@@ -14,7 +14,32 @@ export default class NavBar extends Component {
     ],
   };
 
+  listenToScroll = () => {
+    console.log("hola")
+    const winScroll = window.pageYOffset
+    if (winScroll > 100) {
+      document.getElementById("logo").classList.add('scroll')
+    }
+    else {
+      document.getElementById("logo").classList.remove('scroll')
+    }
+  }
+
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
+  }
+
+
+
+
+
   render() {
+
     return (
       <div className="navigation">
         <div className="navigation__container">
@@ -30,10 +55,10 @@ export default class NavBar extends Component {
             })}
           </ul>
           <Link to="./">
-            <img
+            <img id="logo"
               src={require("./NavBarPictures/logo.svg")}
               alt="logo"
-              className="main-logo"
+              className="logo"
             />
           </Link>
           <Link to="./">
@@ -43,7 +68,7 @@ export default class NavBar extends Component {
               className="main-insta"
             />
           </Link>
-          
+
         </div>
       </div>
     );

@@ -1,17 +1,24 @@
-.main-logo {
+.logo {
   position: absolute;
   max-width: 131px;
   max-height: 131px;
   left: 50%;
-  transform: translateY(-10%);
+  transform: translate(-50%,-10%);
+}
+
+.logo.scroll {
+  width: 65px;
+  height: 65px;
 }
 
 .main-insta {
+  fill: white;
   position: absolute;
   max-width: 24px;
   max-height: 24px;
   left: 93.19%;
   top: 35%;
+  cursor: pointer;
 
   &:hover {
     fill: #EEA9B5;
@@ -19,7 +26,8 @@
 }
 
 .navigation {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background: #13322b;
   height: 90px;
   display: flex;

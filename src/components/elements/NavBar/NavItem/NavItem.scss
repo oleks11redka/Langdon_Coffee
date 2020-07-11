@@ -1,5 +1,6 @@
 .navigation__item {
   margin: 10px 20px;
+  
 }
 
 .navigation__link {
@@ -7,6 +8,7 @@
   color: white;
   font-family: "DINCon";
   transition: 0.3s;
+  cursor: pointer;
 
   &:active {
     color: #eea9b5;
