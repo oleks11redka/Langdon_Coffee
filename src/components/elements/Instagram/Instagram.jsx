@@ -9,8 +9,8 @@ export default class Instagram extends Component {
       <div className="instagram">
         <div className="instagram__pictures"></div>
         <div className="instagram__followingBtn">
-          <a href={instaLink}></a>
-          <a href={instaLink}></a>
+          <a href={instaLink}>Inst</a>
+          <a href={instaLink}>Inst</a>
         </div>
       </div>
     );
