@@ -10,7 +10,7 @@ export default class Origins extends Component {
   render() {
     return (
       <div className="origins">
-        {/* <div className="origins__header">
+        <div className="origins__header">
           <div className="origins__title">
             <h1 className="origins__title-text">Origins</h1>
           </div>
@@ -24,7 +24,7 @@ export default class Origins extends Component {
               bespoke taste
           </p>
           </div>
-        </div> */}
+        </div>
         <Map />
         <OurCredentials />
         <CoffeeHarvestCalendar />
