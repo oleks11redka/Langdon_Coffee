@@ -3,10 +3,28 @@ import './Origins.scss';
 import Map from "../../elements/Map/Map";
 import OurCredentials from "../../elements/OurCredentials/OurCredentials";
 import CoffeeHarvestCalendar from "../../elements/CoffeeHarvestCalendar/CoffeeHarvestCalendar";
+import MapPopUp from "../../elements/MapPopUp/MapPopUp";
 
 
 
 export default class Origins extends Component {
+  state = {
+
+    country: [
+      { countryName: "Rwanda", countryInfo: "kkjfdnjkfnjdnfjsd", key: "11" },
+      { countryName: "Ethiopia", countryInfo: "dfdfnmdnmdm", key: "12" }
+    ],
+
+    countryClick: ""
+  }
+
+
+  openPopUp = (event) => {
+    this.setState({
+      countryClick: event.target.id
+    })
+  }
+
   render() {
     return (
       <div className="origins">
@@ -25,9 +43,10 @@ export default class Origins extends Component {
           </p>
           </div>
         </div>
-        <Map />
+        <Map openPopUp={this.openPopUp} />
         <OurCredentials />
         <CoffeeHarvestCalendar />
+        <MapPopUp countryClick={this.state.countryClick} country={this.state.country} />
       </div>
     )
   }
