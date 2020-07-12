@@ -4,9 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 100px 0;
 
     &__title {
-        margin-top: 36px;
         margin-bottom: 16px;
         text-align: center;
         font-family: 'DINCon';
@@ -20,14 +20,12 @@
     &__box {
         display: flex;
         width: 634px;
-        margin-bottom: 100px;
     }
 
     &__input {
         width: 400px;
         height: 44px;
-        padding-top: 10px;
-        padding-left: 21px;
+        padding: 10px 0 10px 21px;
         border: 1px solid #E0E0E0;
         box-sizing: border-box;
         border-radius: 3px;
@@ -36,6 +34,13 @@
         line-height: 26px;
         letter-spacing: -0.013em;
         font-family: 'Source Sans Pro', sans-serif;
+
+        &::placeholder {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: normal;
+            font-size: 18px;
+            color: #BDBDBD;
+        }
     }
 
     &__button {
