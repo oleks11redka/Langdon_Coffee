@@ -23,26 +23,33 @@ export default class App extends Component {
       { category: 'Community', title: 'Bye-bye', text: 'lorem ipsum', image: './NewsArticlePictures/MainHeaderBackground.png', key: '4', id: '4' },
       { category: 'From Origin', title: 'Mkay', text: 'lorem ipsum', image: './NewsArticlePictures/Footer.png', key: '5', id: '5' },
     ],
+    headers: [
+      {pageTitle: 'Origins', headerPicture: './HeaderPictures/Origins.png', text: 'Langdon Coffee Merchants source green beans from some of the world’s most exciting and XXX coffee origins. Right across the bean belt, we offer roasters a broad selection of traceable (back to the mill, at a minimum) cultivars, processing methods and flavour profiles, meeting the needs of speciality and high-end commercial quality coffee roasters in the UK, New Zealand and Australia. All our beans are extensively cupped for quality assurance at our state-of-the art laboratory in Melbourne by a Q-grader before making their way to our customers. As well as single origin beans, we offer commercial blending for that discerning, bespoke taste.'},
+      {pageTitle: 'Contact Us', headerPicture: './HeaderPictures/ContactUs.png'},
+      {pageTitle: 'About Us', headerPicture: './HeaderPictures/AboutUs.png'},
+      {pageTitle: 'Working with LCM', headerPicture: './HeaderPictures/WorkingWithLcm.png', title: 'We’ve got your green bean needs sorted', text: 'Whatever taste profile, brew method, price or volume requirement you’re after, Langdon Coffee Merchants can help source the perfect green bean for your brew. As well as providing samples, we love to host private cupping sessions to take you through our range first hand – after all, we think it’s best to let our coffee do the talking! With our commercial blending capability, we can also help you create a blend that is unique to your roastery.'},
+      {pageTitle: 'News', headerPicture: './HeaderPictures/News.png'}
+    ],
   }
 
   render() {
-    let { newsInfo } = this.state;
+    let { newsInfo, headers } = this.state;
     return (
       <Router>
         <NavBar />
         {/* <Test /> */}
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route path="/work-in-progress" component={WorkInProgress} />
-        <Route exact path="/news" render={() => <News newsInfo={newsInfo} />} />
-        <Route path="/origins" component={Origins} />
-        {/* <Route path="/contact-us" component={ContactUs} /> */}
-        <Route path="/about-lcm" component={AboutLcm} />
-        {/* <Route path="/working-with-lcm" component={WorkingWithLcm} /> */}
+        <Route exact path="/news" render={() => <News newsInfo={newsInfo} headers={headers} />} />
+        <Route path="/origins" render={() => <Origins headers={headers} />} />
+        <Route path="/contact-us" render={() => <ContactUs headers={headers} />} />
+        <Route path="/about-lcm" render={() => <AboutLcm headers={headers} />} />
+        <Route path="/working-with-lcm" render={() => <WorkingWithLcm headers={headers} />} />
         <Route
           path="/news/:id"
           render={({ match }) => {
             let { id } = match.params;
-            return <SingleArticle newsInfo={newsInfo} articleId={id} />;
+            return <SingleArticle newsInfo={newsInfo} articleId={id} headers={headers} />;
           }}
         />
         <Footer />

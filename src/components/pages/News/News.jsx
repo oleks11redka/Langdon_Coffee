@@ -5,6 +5,7 @@ import './News.scss'
 import AllNewsArticlesPreview from '../../elements/AllNewsArticlesPreview/AllNewsArticlesPreview'
 import NewsLetter from '../../elements/NewsLetter/NewsLetter'
 import FilterBar from '../../elements/FilterBar/FilterBar'
+import Header from '../../elements/Header/Header'
 
 export default class News extends Component {
 
@@ -31,12 +32,13 @@ export default class News extends Component {
 
     render() {
 
-      let { newsInfo } = this.props
+      let { newsInfo, headers } = this.props
       let { search, category } = this.state
 
       return (
         <div className="News">
           {/* <Test newsInfo={newsInfo}/> */}
+          <Header pageHeaderName='News' headers={headers} />
           <NewsLetter />
           <FilterBar search={search} category={category} handleSubmit={this.handleSubmit} categoryChange={this.categoryChange} ref={ref => this.childRef = ref} />
           <AllNewsArticlesPreview newsInfo={newsInfo} search={search} category={category} />
