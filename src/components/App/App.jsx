@@ -12,6 +12,7 @@ import SingleArticle from "../pages/SingleArticle/SingleArticle";
 import Footer from "../elements/Footer/Footer";
 
 import "./App.scss";
+// import Test from "../illya/Test";
 
 export default class App extends Component {
   state = {
@@ -29,6 +30,7 @@ export default class App extends Component {
     return (
       <Router>
         <NavBar />
+        {/* <Test /> */}
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route path="/work-in-progress" component={WorkInProgress} />
         <Route path="/news" render={() => <News newsInfo={newsInfo} />} />
