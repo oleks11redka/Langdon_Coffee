@@ -54,3 +54,27 @@
         color: #FFFFFF;
     }
 }
+
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .origins__text {
+        width: 568px;
+        font-size: 20px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+
+    .header__title-text {
+        font-size: 98px;
+    }
+
+    .header__text {
+        width: 2000px;
+        font-size: 36px;
+        line-height: 45px;
+    }
+}
