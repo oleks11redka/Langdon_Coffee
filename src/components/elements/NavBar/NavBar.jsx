@@ -15,13 +15,12 @@ export default class NavBar extends Component {
   };
 
   listenToScroll = () => {
-    console.log("hola")
     const winScroll = window.pageYOffset
     if (winScroll > 100) {
-      document.getElementById("logo").classList.add('scroll')
+      document.getElementById("logo").style.transform = "translate(-50%,-32%) scale(.6)"
     }
     else {
-      document.getElementById("logo").classList.remove('scroll')
+      document.getElementById("logo").style.transform = "translate(-50%,-10%) scale(1)"
     }
   }
 
