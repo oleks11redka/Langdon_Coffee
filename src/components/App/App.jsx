@@ -31,7 +31,7 @@ export default class App extends Component {
         <NavBar />
         <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
         <Route path="/work-in-progress" component={WorkInProgress} />
-        <Route path="/news" render={() => <News newsInfo={newsInfo} />} />
+        <Route exact path="/news" render={() => <News newsInfo={newsInfo} />} />
         <Route path="/origins" component={Origins} />
         {/* <Route path="/contact-us" component={ContactUs} /> */}
         <Route path="/about-lcm" component={AboutLcm} />
