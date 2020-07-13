@@ -12,7 +12,7 @@ export default class AllNewsArticlesPreview extends Component {
       return (
         // Нужно будет переделать через filter()
         <div className='allNewsArticlesPreview'>
-          {newsInfo.forEach((article) => {
+          {newsInfo.map((article) => {
             if(((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`)) && `${category}` === '') {
               return (
                 <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
@@ -26,7 +26,7 @@ export default class AllNewsArticlesPreview extends Component {
                 <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
               );
             } else {
-              {newsInfo.forEach((article) => {
+              {newsInfo.map((article) => {
                 return (
                   <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
                 );
