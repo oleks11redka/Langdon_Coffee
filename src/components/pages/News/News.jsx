@@ -23,7 +23,6 @@ export default class News extends Component {
     this.setState({
       search: this.childRef.searchField.value
     })
-    console.log(this.childRef.searchField.value)
   }
 
   categoryChange = (event) => {
@@ -31,7 +30,6 @@ export default class News extends Component {
     this.setState({
       category: event.target.value
     })
-    console.log(event.target.value)
   }
 
     render() {

@@ -1,7 +1,7 @@
 .newsArticle {
     width: 305px;
     max-height: 537px;
-    box-shadow: 0px 4px 4px #E0E0E0;
+    box-shadow: 0px 4px 4px 0px #E0E0E0;
     border-radius: 3px;
     margin-bottom: 36px;
     border-radius: 3px;
@@ -117,7 +117,7 @@
     }
 
     &:hover {
-        box-shadow: 0px 4px 4px #d1d1d1;
+        box-shadow: 0px 4px 10px 1px #dddddd;
         transition: .3s;
     }
 }
