@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     padding: 100px 0;
+    transition: .3s;
 
     &__title {
         margin-bottom: 16px;
@@ -19,13 +20,13 @@
 
     &__box {
         display: flex;
-        width: 634px;
+        position: relative;
     }
 
     &__input {
-        width: 400px;
+        width: 634px;
         height: 44px;
-        padding: 10px 0 10px 21px;
+        padding: 10px 165px 10px 21px;
         border: 1px solid #E0E0E0;
         box-sizing: border-box;
         border-radius: 3px;
@@ -34,6 +35,17 @@
         line-height: 26px;
         letter-spacing: -0.013em;
         font-family: 'Source Sans Pro', sans-serif;
+        outline: 0;
+        transition: .5s;
+
+        &:focus {
+            transition: 1s;
+            border: 1px solid #EEA9B5;
+            &::placeholder {
+                color: #eea9b470;
+                transition: 1s;
+            }
+        }
 
         &::placeholder {
             font-family: 'Source Sans Pro', sans-serif;
@@ -44,11 +56,15 @@
     }
 
     &__button {
+        position: absolute;
+        right: 2px;
+        top: 2px;
         width: 155px;
-        height: 44px;
+        height: 40px;
         background: #EEA9B5;
-        border: 1px solid #FFFFFF;
-        border-radius: 2px;
+        // border: 1px solid #FFFFFF;
+        border: none;
+        border-radius: 0 2px 2px 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,7 +72,6 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
-        line-height: 20px;
         font-family: "DINCon";
         letter-spacing: -0.013em;
         color: #fff;
@@ -64,7 +79,7 @@
     
         &:hover {
             background: #f1788c;
-            border: none;
+            // border: none;
             color: #fff;
         }
     
