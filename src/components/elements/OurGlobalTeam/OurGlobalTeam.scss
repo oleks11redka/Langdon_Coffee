@@ -1,0 +1,122 @@
+.ourGlobalTeam {
+    position: relative;
+    background-color: #F4F4F4;
+    max-height: 900px;
+
+    &__info {
+        height: 653px;
+        background: #13322B;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-top: 60px;
+        margin-bottom: 16px;
+        width: 405px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        letter-spacing: 0.013em;
+        color: #FFFFFF;
+    }
+
+    &__text {    
+        margin-bottom: 60px;    
+        width: 854px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #FFFFFF;
+    }
+
+    &__picturesBlock {
+        position: relative;
+        top: -200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__country-pictures {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__picture {
+        max-width: 445px;
+        max-height: 332px;
+    }
+
+    &__country {
+        margin-top: 12px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 34px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+}
+
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .ourGlobalTeam__title {
+        font-size: 52px;
+    }
+
+    .ourGlobalTeam__text {
+        font-size: 20px;
+        width: 678px;
+    }
+
+    .ourGlobalTeam__picture {
+        max-width: 235px;
+    }
+
+    .ourGlobalTeam__picturesBlock {
+        top: -90px;
+    }
+}
+
+// for medium screens
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .ourGlobalTeam__picture {
+        max-width: 305px;
+    }
+
+    .ourGlobalTeam__picturesBlock {
+        top: -120px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    
+    .ourGlobalTeam__title {
+        font-size: 98px;
+        width: 662px;
+    }
+
+    .ourGlobalTeam__text {
+        font-size: 35px;
+        width: 1500px;
+    }
+
+    .ourGlobalTeam__picture {
+        max-width: 500px;
+        max-height: 400px;
+    }
+
+    .ourGlobalTeam__country {
+        font-size: 35px;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MainHeader from '../../elements/MainHeader/MainHeader'
-import WhoWeAre from '../../elements/WhoWeAre/WhoWeAre'
+import GreenBlockWithButton from '../../elements/GreenBlockWithButton/GreenBlockWithButton'
 import OurOffering from '../../elements/OurOffering/OurOffering'
 import Instagram from '../../elements/Instagram/Instagram'
 import InTheNews from '../../elements/InTheNews/InTheNews'
@@ -15,11 +15,11 @@ export default class Home extends Component {
   }
 
   render() {
-    let { newsInfo } = this.props
+    let { newsInfo, greenBlocks } = this.props
     return (
       <div className='home'>
         <MainHeader />
-        <WhoWeAre />
+        <GreenBlockWithButton greenBlocks={greenBlocks} blockName='Who we are' />
         <OurOffering />
         <InTheNews newsInfo={newsInfo} />
         <NewsLetter />

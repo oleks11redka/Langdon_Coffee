@@ -1,5 +1,9 @@
 .instagram {
     background: #F4F4F4;
+    max-width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+    transition: .3s;
 
     &__title {
         margin-bottom: 36px;
@@ -27,7 +31,21 @@
     &__followingBtn {
         display: flex;
         justify-content: center;
-        
+        text-decoration: none;
+
+        &:hover {
+            .instagram {
+                &__text-btn {
+                    color: #EEA9B5;
+                    transition: .3s;
+                }
+            
+                &__icon {
+                    fill: #EEA9B5;
+                    transition: .3s;
+                }
+            }
+        }
     }
 
     &__text-btn {
@@ -37,12 +55,13 @@
         line-height: 34px;
         letter-spacing: 0.013em;
         color: #13322B;
-        text-decoration: none;
-        margin-bottom: 100px;
     }
 
     &__icon {
+        position: relative;
+        top: 6px;
         margin-left: 10px;
+        fill: #13322B;
     }
 }
 
