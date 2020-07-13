@@ -10,9 +10,8 @@ export default class ContactUs extends Component {
     let { headers } = this.props
 
     return (
-      <div className='aboutLcm'>
+      <div className='contactUs'>
         <Header pageHeaderName='Contact Us' headers={headers} />
-        <h1 className='s'>Hello coocoo</h1>
       </div>
     )
   }

@@ -1,9 +1,9 @@
-.whoWeAre {
+.southMelbourneCoffeeHq {
     display: flex;
     background: #13322b;
 
     &__picture {
-        background: url(./WhoWeArePictures/WhoWeAre.png) no-repeat;
+        background: url(./SouthMelbourneCoffeeHqPictures/HQ.png) no-repeat;
         background-size: cover;
         width: 50%;
         height: 710px;
@@ -20,7 +20,7 @@
         margin-bottom: 16px;
         text-align: left;
         font-weight: bold;
-        font-size: 72px;
+        font-size: 40px;
         line-height: 101px;
         color: #fff;
         font-family: "DINCon";

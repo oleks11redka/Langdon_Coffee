@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import './AboutLcm.scss';
 
 import Header from '../../elements/Header/Header';
+import FromBeanToBrew from '../../elements/FromBeanToBrew/FromBeanToBrew';
+import OurGlobalTeam from '../../elements/OurGlobalTeam/OurGlobalTeam';
+import OurHeritageService from '../../elements/OurHeritageService/OurHeritageService';
+import SouthMelbourneCoffeeHq from '../../elements/SouthMelbourneCoffeeHq/SouthMelbourneCoffeeHq';
+import SupplyChain from '../../elements/SupplyChain/SupplyChain';
 
 export default class AboutLcm extends Component {
 
@@ -12,7 +17,11 @@ export default class AboutLcm extends Component {
     return (
       <div className='aboutLcm'>
         <Header pageHeaderName='About Us' headers={headers} />
-        <h1 className='s'>Hello coocoo</h1>
+        <FromBeanToBrew />
+        <OurGlobalTeam />
+        <OurHeritageService />
+        <SouthMelbourneCoffeeHq />
+        <SupplyChain />
       </div>
     )
   }

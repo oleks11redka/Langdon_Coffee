@@ -9,9 +9,8 @@ export default class WorkingWithLcm extends Component {
     let { headers } = this.props
 
     return (
-      <div className='aboutLcm'>
+      <div className='workingWithLcm'>
         <Header pageHeaderName='Working with LCM' headers={headers} />
-        <h1 className='s'>Hello coocoo</h1>
       </div>
     )
   }

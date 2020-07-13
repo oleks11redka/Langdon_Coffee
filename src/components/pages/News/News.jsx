@@ -36,7 +36,7 @@ export default class News extends Component {
       let { search, category } = this.state
 
       return (
-        <div className="News">
+        <div className="news">
           {/* <Test newsInfo={newsInfo}/> */}
           <Header pageHeaderName='News' headers={headers} />
           <NewsLetter />
