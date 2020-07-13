@@ -11,7 +11,7 @@ class NewsArticle extends Component {
         return (
             <div className='NewsArticle'>
                 <div className='NewsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
-                    <p className='NewsArticle__category'>{category}</p>
+                    <p className={`NewsArticle__category NewsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
                 </div>
                 <div className="NewsArticle__main">
                     <div className='NewsArticle__info'>
