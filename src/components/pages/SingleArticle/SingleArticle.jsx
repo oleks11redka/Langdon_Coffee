@@ -6,6 +6,11 @@ import NewsArticle from '../../elements/NewsArticle/NewsArticle';
 import Header from '../../elements/Header/Header';
 
 export default class SingleArticle extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  } 
+  
     render() {
         let { newsInfo, articleId, headers } = this.props
       return (

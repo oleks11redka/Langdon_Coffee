@@ -4,6 +4,11 @@ import GeneralButton from '../../elements/GeneralButton/GeneralButton'
 import './WorkInProgress.scss'
 
 export default class WorkInProgress extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
     render() {
       return (
         <div className='workInProgress'>

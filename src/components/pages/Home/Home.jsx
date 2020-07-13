@@ -9,6 +9,11 @@ import NewsLetter from '../../elements/NewsLetter/NewsLetter'
 import './Home.scss'
 
 export default class Home extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
     render() {
       let { newsInfo } = this.props
       return (

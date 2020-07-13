@@ -14,6 +14,10 @@ export default class News extends Component {
     category: ''
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleSubmit = (event) => {
     event.preventDefault()
     this.setState({

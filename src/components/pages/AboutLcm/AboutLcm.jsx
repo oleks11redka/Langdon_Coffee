@@ -10,6 +10,10 @@ import SupplyChain from '../../elements/SupplyChain/SupplyChain';
 
 export default class AboutLcm extends Component {
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
 
     let { headers } = this.props

@@ -4,6 +4,11 @@ import './WorkingWithLcm.scss'
 import Header from '../../elements/Header/Header'
 
 export default class WorkingWithLcm extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
 
     let { headers } = this.props

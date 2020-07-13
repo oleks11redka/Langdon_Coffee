@@ -19,6 +19,10 @@ export default class Origins extends Component {
     countryClick: ""
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
 
   openPopUp = (event) => {
     this.setState({
