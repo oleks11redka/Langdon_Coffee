@@ -14,17 +14,17 @@ export default class Home extends Component {
     window.scrollTo(0, 0);
   }
 
-    render() {
-      let { newsInfo } = this.props
-      return (
-        <div className='home'>
-            <MainHeader />
-            <WhoWeAre />
-            <OurOffering />
-            <InTheNews newsInfo={newsInfo} />
-            <NewsLetter />
-            <Instagram />
-        </div>
-      )
-    }
+  render() {
+    let { newsInfo } = this.props
+    return (
+      <div className='home'>
+        <MainHeader />
+        <WhoWeAre />
+        <OurOffering />
+        <InTheNews newsInfo={newsInfo} />
+        <NewsLetter />
+        <Instagram />
+      </div>
+    )
+  }
 }

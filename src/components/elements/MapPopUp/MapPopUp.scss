@@ -1,13 +1,16 @@
 .map-popup {
-  top: 500px;
+  top: 200px;
   left: 100px;
   position: fixed;
-  display: none;
   width: 854px;
-  height: 200px;
+  height: 600px;
   background-color: green;
 }
 
+.text {
+  font-size: 40px;
+  font-family: 'DINCon';
+}
 // .popup__header {
 //   background: url('./MapPopUpHeader.png') no-repeat;
 //   background-size: cover;
