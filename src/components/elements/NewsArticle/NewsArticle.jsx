@@ -33,10 +33,7 @@ class NewsArticle extends Component {
                         <h2 className='newsArticle__title'>{title}</h2>
                         <p className='newsArticle__text'>{text}</p>
                     </div>
-                    <button className='newsArticle__button' onClick={() => {
-                        history.push('/news/' + id)
-                    }}> <img className='newsArticle__button-img' src={require("./NewsArticlePictures/long-arrow-alt-right.svg")} alt="button show more" />
-                    </button>
+                    <button className='newsArticle__button'><img className='newsArticle__button-img' src={require("./NewsArticlePictures/long-arrow-alt-right.svg")} alt="button show more" /></button>
                 </div>
             </div>)
         }
