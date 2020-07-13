@@ -1,4 +1,4 @@
-.NewsArticle {
+.newsArticle {
     width: 305px;
     max-height: 537px;
     box-shadow: 0px 4px 4px #E0E0E0;
@@ -28,7 +28,7 @@
         text-align: center;
         letter-spacing: 0.013em;
         color: #000000;
-        border-radius: 0 3px 0 5px;
+        border-radius: 0 3px 0 3px;
 
         &--events {
             background-color: #27AE60;
@@ -103,3 +103,96 @@
         }
     }
 }
+
+.singleNewsArticle {
+    max-width: 854px;
+    margin: 0 auto;
+    margin-top: 36px;
+
+    &__links {
+        font-family: "DINCon";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 0.013em;
+        color: #000000;
+
+        a {
+            text-decoration: none;
+            color: #000000;
+            transition: .3s;
+            padding: 0 12px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:hover {
+                transition: .3s;
+                color: #EEA9B5;
+            }
+        }
+    }
+
+    &__grey-title {
+        padding-left: 12px;
+        color: #616161;
+    }
+
+    &__title {
+        margin-top: 36px;
+        font-family: "DINCon";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+
+    &__category {
+        margin-top: 20px;
+        padding: 6px;
+        width: 100px;
+        height: 30px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #000000;
+        border-radius: 0 3px 0 3px;
+    }
+
+    &__photo {
+        margin-top: 36px;
+        background-size: cover;
+        height: 340px;
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 36px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }
+
+    &__button {
+        margin-top: 36px;
+    }
+}
+
+            // <div className='singleNewsArticle'>
+            //     <div className='singleNewsArticle__links'><Link to="/">HOME</Link> / <Link to="/news">NEWS</Link> / <span>{title}</span></div>
+            //     <h2 className='singleNewsArticle__title'>{title}</h2>
+            //     <p className={`newsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
+            //     <div className='singleNewsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}></div>
+            //     <p className='singleNewsArticle__text'>{text}</p>
+            //     <button className='singleNewsArticle__button' onClick={() => {
+            //         history.push('/news');
+            //     }}>Go Back To All News</button>
+            // </div>

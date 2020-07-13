@@ -1,28 +1,49 @@
 import React, { Component } from 'react'
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import './NewsArticle.scss'
 
 class NewsArticle extends Component {
     render() {
-        let { category, title, text, image, history, id } = this.props
+        let { category, title, text, image, history, id, fullScreen } = this.props
         let requiredImage = require(`${image}`)
+        let news
 
-        return (
-            <div className='NewsArticle'>
-                <div className='NewsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
-                    <p className={`NewsArticle__category NewsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
+        if (fullScreen) {
+            news = (
+            <div className='singleNewsArticle'>
+                <div className='singleNewsArticle__links'><Link to="/">HOME</Link> / <Link to="/news">NEWS</Link> / <span className='singleNewsArticle__grey-title'>{title}</span></div>
+                <h2 className='singleNewsArticle__title'>{title}</h2>
+                <p className={`singleNewsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
+                <div className='singleNewsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}></div>
+                <p className='singleNewsArticle__text'>{text}</p>
+                <button className='singleNewsArticle__button' onClick={() => {
+                    history.push('/news');
+                }}>Go Back To All News</button>
+            </div>
+            )
+        } else {
+            news = (
+            <div className='newsArticle'>
+                <div className='newsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
+                    <p className={`newsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
                 </div>
-                <div className="NewsArticle__main">
-                    <div className='NewsArticle__info'>
-                        <h2 className='NewsArticle__title'>{title}</h2>
-                        <p className='NewsArticle__text'>{text}</p>
+                <div className='newsArticle__main'>
+                    <div className='newsArticle__info'>
+                        <h2 className='newsArticle__title'>{title}</h2>
+                        <p className='newsArticle__text'>{text}</p>
                     </div>
-                    <button className='NewsArticle__button' onClick={() => {
+                    <button className='newsArticle__button' onClick={() => {
                         history.push('/news/' + id)
-                    }}> <img className='NewsArticle__button-img' src={require("./NewsArticlePictures/long-arrow-alt-right.svg")} alt="button show more" />
+                    }}> <img className='newsArticle__button-img' src={require("./NewsArticlePictures/long-arrow-alt-right.svg")} alt="button show more" />
                     </button>
                 </div>
+            </div>)
+        }
+
+        return (
+            <div className='newsArticleWrapper'>
+                {news}
             </div>
         )
     }
