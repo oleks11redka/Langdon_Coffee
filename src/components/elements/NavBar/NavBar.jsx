@@ -50,14 +50,14 @@ export default class NavBar extends Component {
               );
             })}
           </ul>
-          <Link to="./">
+          <Link to="/">
             <img id="logo"
               src={require("./NavBarPictures/logo.svg")}
               alt="logo"
               className="logo"
             />
           </Link>
-          <Link to="./">
+          <Link to="/">
             <img
               src={require("./NavBarPictures/instagram.svg")}
               alt="insta-img"
