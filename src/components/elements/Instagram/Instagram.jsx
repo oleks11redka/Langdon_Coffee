@@ -9,11 +9,11 @@ export default class Instagram extends Component {
       <div className="instagram">
         <h1 className="instagram__title">Instagram</h1>
         <div className="instagram__pictures">
-          <img className='instagram__picture' src={require("./instagrampictures/Rectangle 8.svg")} alt="fotos of posts" />
-          <img className='instagram__picture' src={require("./instagrampictures/Rectangle 11.svg")} alt="fotos of posts" />
-          <img className='instagram__picture' src={require("./instagrampictures/Rectangle 13.svg")} alt="fotos of posts" />
-          <img className='instagram__picture' src={require("./instagrampictures/Rectangle 12.svg")} alt="fotos of posts" />
-          <img className='instagram__picture' src={require("./instagrampictures/Rectangle 13-1.svg")} alt="fotos of posts" />
+          <img className='instagram__picture' src={require("./InstagramPictures/Instagram1.png")} alt="fotos of posts" />
+          <img className='instagram__picture' src={require("./InstagramPictures/Instagram2.png")} alt="fotos of posts" />
+          <img className='instagram__picture' src={require("./InstagramPictures/Instagram3.png")} alt="fotos of posts" />
+          <img className='instagram__picture' src={require("./InstagramPictures/Instagram4.png")} alt="fotos of posts" />
+          <img className='instagram__picture' src={require("./InstagramPictures/Instagram5.png")} alt="fotos of posts" />
         </div>
           <a className='instagram__followingBtn' href={instaLink}>
             <p className='instagram__text-btn'>Follow Us!</p>

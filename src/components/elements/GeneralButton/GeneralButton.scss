@@ -1,10 +1,8 @@
 .generalButton {
     margin-top: 58px;
-    margin-bottom: 75px;
     width: 194px;
     height: 44px;
     background: #EEA9B5;
-    border: 1px solid #FFFFFF;
     border-radius: 2px;
     display: flex;
     justify-content: center;
@@ -21,7 +19,6 @@
 
     &:hover {
         background: #f1788c;
-        border: none;
         color: #fff;
     }
 

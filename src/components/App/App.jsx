@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import NavBar from "../elements/NavBar/NavBar";
 import Home from "../pages/Home/Home";
 import WorkInProgress from "../pages/WorkInProgress/WorkInProgress";
@@ -13,6 +14,7 @@ import Footer from "../elements/Footer/Footer";
 
 import "./App.scss";
 // import Test from "../illya/Test";
+// import Test from '../Alex/Test/Test'
 
 export default class App extends Component {
   state = {
@@ -30,21 +32,26 @@ export default class App extends Component {
       {pageTitle: 'Working with LCM', headerPicture: './HeaderPictures/WorkingWithLcm.png', title: 'We’ve got your green bean needs sorted', text: 'Whatever taste profile, brew method, price or volume requirement you’re after, Langdon Coffee Merchants can help source the perfect green bean for your brew. As well as providing samples, we love to host private cupping sessions to take you through our range first hand – after all, we think it’s best to let our coffee do the talking! With our commercial blending capability, we can also help you create a blend that is unique to your roastery.'},
       {pageTitle: 'News', headerPicture: './HeaderPictures/News.png'}
     ],
+    greenBlocks: [
+      {greenTitle: '', greenPicture: './GreenBlockWithButton/CuppingAndSampling.png', greenText: `<p class='greenBlockWithButton__text'>As well as customer cuppings, our labs are busy year-round tracking the quality and performance of our beans over time: from the washing station at origin, on arrival at our warehouses (before samples are sent to you), and at three monthly intervals to ensure the beans’ performance holds up.</p><p class='greenBlockWithButton__text'>If you happen to visiting Melbourne, we’d love to show you around our brand new, state-of-the-art cupping laboratory and roasting room.</p><p class='greenBlockWithButton__text'>Alternately, we can arrange to come and cup with you at your roasting business or warehouse, or send green or roasted sample to you via post..</p>`},
+      {greenTitle: 'Who we are', greenPicture: './GreenBlockWithButton/WhoWeAre.png', greenText: `<p class='greenBlockWithButton__text'>A small but closely connected global team of dedicated, knowledgeable coffee enthusiasts, Langdon Coffee Merchant’s goal is to build sustainable, meaningful relationships with our producers and customers alike.</p><p class='greenBlockWithButton__text'>We know our coffee beans inside and out, and we only sell what we like to drink. In most cases, we are in direct contact with the producer throughout the growing and harvesting season and cup at origin as often as we can.</p><p class='greenBlockWithButton__text'>When you choose to buy green coffee from Langdon Coffee Merchants, you can trust that your beans have been sourced sustainably, rigorously quality tested and their producers paid fairly</p>`},
+      {greenTitle: 'South Melbourne Coffee HQ', greenPicture: './GreenBlockWithButton/HQ.png', greenText: ` <p class='greenBlockWithButton__text'>In 2020, Langdon Coffee Merchants unveiled its state-of-the-art HQ and Cupping Laboratory in leafy South Melbourne – home to some of Melbourne’s favourite roasteries and cafes.</p><p class='greenBlockWithButton__text'>Transforming a neglected mid-19th century warehouse, the South Melbourne HQ features a &lt;&lt;cupping laboratory&gt;&gt;, roasting room, &lt;&lt;other highlights??&gt;&gt;.</p><p class='greenBlockWithButton__text'>Equipped with a W1 Geisen roaster, Langdon Coffee Merchant’s sensory experts can now roast small batch specialty coffees on-site, as well as conducting cupping sessions for customers a drop by for a latte, we’ve got a La Marzocca in the street facing brew-bar.</p>`}
+    ],
   }
 
   render() {
-    let { newsInfo, headers } = this.state;
+    let { newsInfo, headers, greenBlocks } = this.state;
     return (
       <Router>
         <NavBar />
         {/* <Test /> */}
-        <Route exact path="/" render={() => <Home newsInfo={newsInfo} />} />
+        <Route exact path="/" render={() => <Home newsInfo={newsInfo} greenBlocks={greenBlocks} />} />
         <Route path="/work-in-progress" component={WorkInProgress} />
         <Route exact path="/news" render={() => <News newsInfo={newsInfo} headers={headers} />} />
         <Route path="/origins" render={() => <Origins headers={headers} />} />
         <Route path="/contact-us" render={() => <ContactUs headers={headers} />} />
-        <Route path="/about-lcm" render={() => <AboutLcm headers={headers} />} />
-        <Route path="/working-with-lcm" render={() => <WorkingWithLcm headers={headers} />} />
+        <Route path="/about-lcm" render={() => <AboutLcm headers={headers} greenBlocks={greenBlocks} />} />
+        <Route path="/working-with-lcm" render={() => <WorkingWithLcm headers={headers} greenBlocks={greenBlocks} />} />
         <Route
           path="/news/:id"
           render={({ match }) => {

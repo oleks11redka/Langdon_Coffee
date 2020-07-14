@@ -5,8 +5,8 @@ import Header from '../../elements/Header/Header';
 import FromBeanToBrew from '../../elements/FromBeanToBrew/FromBeanToBrew';
 import OurGlobalTeam from '../../elements/OurGlobalTeam/OurGlobalTeam';
 import OurHeritageService from '../../elements/OurHeritageService/OurHeritageService';
-import SouthMelbourneCoffeeHq from '../../elements/SouthMelbourneCoffeeHq/SouthMelbourneCoffeeHq';
 import SupplyChain from '../../elements/SupplyChain/SupplyChain';
+import GreenBlockWithButton from '../../elements/GreenBlockWithButton/GreenBlockWithButton';
 
 export default class AboutLcm extends Component {
 
@@ -16,7 +16,7 @@ export default class AboutLcm extends Component {
 
   render() {
 
-    let { headers } = this.props
+    let { headers, greenBlocks } = this.props
 
     return (
       <div className='aboutLcm'>
@@ -24,7 +24,7 @@ export default class AboutLcm extends Component {
         <FromBeanToBrew />
         <OurGlobalTeam />
         <OurHeritageService />
-        <SouthMelbourneCoffeeHq />
+        <GreenBlockWithButton greenBlocks={greenBlocks} blockName='South Melbourne Coffee HQ' />
         <SupplyChain />
       </div>
     )

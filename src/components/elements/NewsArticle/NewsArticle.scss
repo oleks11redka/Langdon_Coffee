@@ -1,11 +1,12 @@
 .newsArticle {
     width: 305px;
     max-height: 537px;
-    box-shadow: 0px 4px 4px #E0E0E0;
+    box-shadow: 0px 4px 4px 0px #E0E0E0;
     border-radius: 3px;
     margin-bottom: 36px;
     border-radius: 3px;
     cursor: pointer;
+    transition: .3s;
     
     &__photo{
         display: flex;
@@ -97,15 +98,27 @@
         margin-right: 20px;
         margin-top: 25px;
         margin-bottom: 28px;
+        fill: #EEA9B5;
+    }
 
-        &-img {
-            width: 21px;
-            height: 11px;
+    &__button-arrow {
+        width: 22px;
+        height: 12px;
+        transition: .3s;
+
+        &:hover {
+            fill: #f1788c;
+            transform: scaleX(1.3);
         }
     }
 
     button {
         outline: none;
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 10px 1px #dddddd;
+        transition: .3s;
     }
 }
 
