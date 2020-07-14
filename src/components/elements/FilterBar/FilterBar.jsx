@@ -5,13 +5,12 @@ import './FilterBar.scss'
 export default class FilterBar extends Component {
     render() {
 
-      let { category, handleSubmit, categoryChange } = this.props
+      let { search, category, handleSearch, categoryChange } = this.props
 
       return (
         <div className='filterBar'>
-          <form className='filterBar__search' onSubmit={handleSubmit}>
-            <input className='filterBar__search-field' name="searchField" type="text" placeholder="Search for news" ref={ref => this.searchField = ref}/>
-            {/* <input  type="submit" value="Submit" /> */}
+          <form className='filterBar__search'> 
+            <input className='filterBar__search-field' name="searchField" type="text" placeholder="Search for news" value={search} onChange={handleSearch} />
             <img className='filterBar__search-button' src={require("./FilterBarPicture/search.svg")} alt="search logo"/>
           </form>
           <select className='filterBar__box' value={category} onChange={categoryChange}>
