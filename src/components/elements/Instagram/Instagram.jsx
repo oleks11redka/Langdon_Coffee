@@ -4,7 +4,7 @@ import "./Instagram.scss";
 
 export default class Instagram extends Component {
   render() {
-    let instaLink = "https://www.instagram.com";
+    let instaLink = "https://www.instagram.com/langdoncoffeemerchants/";
     return (
       <div className="instagram">
         <h1 className="instagram__title">Instagram</h1>
