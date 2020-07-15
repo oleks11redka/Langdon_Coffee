@@ -17,9 +17,12 @@ class NewsArticle extends Component {
                 <p className={`singleNewsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
                 <div className='singleNewsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}></div>
                 <p className='singleNewsArticle__text'>{text}</p>
-                <button className='singleNewsArticle__button' onClick={() => {
-                    history.push('/news');
-                }}>Go Back To All News</button>
+                <button className='singleNewsArticle__button' onClick={() => {history.push('/news')}}>
+                    <svg className='singleNewsArticle__button-arrow' width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" clipRule="evenodd" d="M13.7841 19.875H27.9375C28.2482 19.875 28.5 19.6232 28.5 19.3125V16.6875C28.5 16.3769 28.2482 16.125 27.9375 16.125H13.7841V13.966C13.7841 12.9637 12.5723 12.4618 11.8635 13.1705L7.82952 17.2045C7.39016 17.6439 7.39016 18.3562 7.82952 18.7955L11.8635 22.8295C12.5722 23.5382 13.7841 23.0363 13.7841 22.034V19.875Z"/>
+                    </svg>
+                    <p className='singleNewsArticle__button-text'>Go Back To All News</p>
+                </button>
             </div>
             )
         } else {

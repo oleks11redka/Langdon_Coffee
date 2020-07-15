@@ -49,6 +49,12 @@
     font-size: 16px;
     line-height: 20px;
     color: #eea9b5;
+    transition: .3s;
+
+    &:hover {
+      color: #fff;
+      transition: .3s;
+    }
   }
 
   &__rightSide {

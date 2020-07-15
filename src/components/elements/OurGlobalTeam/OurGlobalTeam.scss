@@ -4,7 +4,7 @@
     max-height: 900px;
 
     &__info {
-        height: 653px;
+        height: 580px;
         background: #13322B;
         display: flex;
         flex-direction: column;
@@ -39,6 +39,8 @@
         top: -200px;
         display: flex;
         justify-content: space-between;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     &__country-pictures {

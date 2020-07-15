@@ -9,7 +9,6 @@ export default class AllNewsArticlesPreview extends Component {
   componentDidUpdate() {
     let doc = document.getElementById('oops')
     if(document.getElementById('doc').childNodes.length > 1) {
-      console.log(document.getElementById('doc').childNodes.length)
       return doc.innerHTML = ''
     } else {
       return doc.innerHTML = 'No Such Articles Were Found :( Maybe try something else ?'
