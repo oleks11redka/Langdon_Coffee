@@ -38,7 +38,7 @@ export default class NavBar extends Component {
 
     return (
       <div className="navigation">
-        <div className="navigation__container container">
+        <div className="navigation__container">
           <ul className="navigation-bar">
             {this.state.navbar.map((item) => {
               return (
