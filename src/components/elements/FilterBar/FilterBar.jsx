@@ -9,11 +9,11 @@ export default class FilterBar extends Component {
 
       return (
         <div className='filterBar'>
-          <form className='filterBar__search'> 
-            <input className='filterBar__search-field' name="searchField" type="text" placeholder="Search for news" value={search} onChange={handleSearch} />
+          <form className='filterBar__search' style={{ borderBottom: (search.trim() !== '' ? '1px solid #EEA9B5' : '1px solid #616161') }}> 
+            <input className='filterBar__search-field' name="searchField" type="text" placeholder="Search for news" value={search} onChange={handleSearch}/>
             <img className='filterBar__search-button' src={require("./FilterBarPicture/search.svg")} alt="search logo"/>
           </form>
-          <select className='filterBar__box' value={category} onChange={categoryChange}>
+          <select className='filterBar__box' value={category} onChange={categoryChange} style={{ borderBottom: (category !== '' ? '1px solid #EEA9B5' : '1px solid #616161') }}>
             <option className='filterBar__element' value="">Filter by Category</option>
             <option className='filterBar__element' value="Events">Events</option>
             <option className='filterBar__element' value="How-to">How-to</option>
