@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Children } from 'react'
 
 import './AllNewsArticlesPreview.scss'
 
@@ -11,25 +11,23 @@ export default class AllNewsArticlesPreview extends Component {
 
       return (
         // Нужно будет переделать через filter()
-        <div className='allNewsArticlesPreview'>
+        <div className='allNewsArticlesPreview' id='doc'>
           {newsInfo.map((article) => {
             if(((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`)) && `${category}` === '') {
-              return (
-                <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
-              );
-            } if(article.category === (`${category}`) && ((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`))) {
-              return (
-                <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
-              );
-            } if(article.category === (`${category}`) && `${search}` === '') {
-              return (
-                <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
-              );
-            } else {
+              return <NewsArticle {...article} />
+            } 
+            
+            if(article.category === (`${category}`) && ((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`))) {
+              return <NewsArticle {...article} />
+            } 
+            
+            if(article.category === (`${category}`) && `${search}` === '') {
+              return <NewsArticle {...article} />
+            }
+            
+            else {
               {newsInfo.map((article) => {
-                return (
-                  <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} />
-                );
+                return <NewsArticle {...article} />
               })}
             }
           })}

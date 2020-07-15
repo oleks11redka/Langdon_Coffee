@@ -32,7 +32,7 @@ export default class ConactForm extends Component {
             <option value="Other">Other (please specify below)</option>
           </select>
           <input placeholder="Your message" className='contactForm__text-input' type="text" name="message" id="message"/>
-          <label className='contactForm__policy' for="policy">I agree to <a href="https://www.langdoncoffee.com.au/wp-content/uploads/2020/06/Website-Privacy-Policy-.pdf">privacy policy</a></label>
+          <label className='contactForm__policy' htmlFor="policy">I agree to <a href="https://www.langdoncoffee.com.au/wp-content/uploads/2020/06/Website-Privacy-Policy-.pdf">privacy policy</a></label>
           <input required className='contactForm__checkbox' type="checkbox" name="policy" id="policy"/>
           <input className='contactForm__submit' type="submit" value="submit"/>
         </form>

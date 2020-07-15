@@ -5,6 +5,8 @@ import Header from '../../elements/Header/Header'
 import PurchasingCuppingSampling from '../../elements/PurchasingCuppingSampling/PurchasingCuppingSampling';
 import GreenBlockWithButton from '../../elements/GreenBlockWithButton/GreenBlockWithButton';
 import ConactForm from '../../elements/ConactForm/ContactForm';
+import PricingDeliveryQuality from '../../elements/PricingDeliveryQuality/PricingDeliveryQuality';
+import FAQ from '../../elements/FAQ/FAQ';
 
 export default class WorkingWithLcm extends Component {
 
@@ -22,6 +24,8 @@ export default class WorkingWithLcm extends Component {
         <PurchasingCuppingSampling />
         <GreenBlockWithButton greenBlocks={greenBlocks} blockName='' />
         <ConactForm formTitle='Contact Form' text />
+        <PricingDeliveryQuality />
+        <FAQ />
       </div>
     )
   }

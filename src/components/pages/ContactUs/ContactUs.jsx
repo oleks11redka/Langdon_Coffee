@@ -4,6 +4,7 @@ import './ContactUs.scss'
 
 import Header from '../../elements/Header/Header'
 import ConactForm from '../../elements/ConactForm/ContactForm';
+import OurLocations from '../../elements/OurLocations/OurLocations';
 
 export default class ContactUs extends Component {
 
@@ -22,6 +23,7 @@ export default class ContactUs extends Component {
           <p className='contactUs__text'>At Langdon Coffee Merchants we love to talk all things coffee – reach out to request a sampling, come in for a cupping, order your beans or simply have a chat</p>
         </div>
         <ConactForm formTitle='Contact Form' />
+        <OurLocations />
       </div>
     )
   }

@@ -17,6 +17,16 @@
     color: #fff;
     transition: 0.4s;
 
+    a {
+        text-decoration: none;
+        color: #fff;
+        outline:none;
+
+        &*,*:focus,*:hover{
+            outline:none;
+        }
+    }
+
     &:hover {
         background: #f1788c;
         color: #fff;
