@@ -20,7 +20,7 @@ export default class SingleArticle extends Component {
           {newsInfo.map((article) => {
             if (article.id === `${articleId}`) {
               return (
-                <NewsArticle category={article.category} title={article.title} text={article.text} image={article.image} key={article.key} id={article.id} fullScreen />
+                <NewsArticle {...article} fullScreen />
               );
             }
           })}

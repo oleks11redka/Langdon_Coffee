@@ -1,3 +1,7 @@
+// .newsArticleWrapper {
+//     margin-right: auto;
+// }
+
 .newsArticle {
     width: 305px;
     max-height: 537px;
@@ -213,6 +217,7 @@
         flex-direction: row;
         align-items: center;
         margin-top: 36px;
+        cursor: pointer;
         &:focus {
             outline:none;
         }

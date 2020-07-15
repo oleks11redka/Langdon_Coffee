@@ -39,9 +39,9 @@ export default class NavBar extends Component {
     return (
       <div className="navigation">
         <div className="navigation__container">
-          <input type="checkbox" id="menu" class="navigation__input"></input>
-          <label for="menu" class="navigation__menu">
-            <i class="burger-menu"><span></span></i>
+          <input type="checkbox" id="menu" className="navigation__input"></input>
+          <label htmlFor="menu" className="navigation__menu">
+            <i className="burger-menu"><span></span></i>
           </label>
 
           <ul className="navigation-bar">

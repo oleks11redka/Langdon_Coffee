@@ -7,7 +7,7 @@
     min-height: 600px;
 }
 
-#oops {
+.oops {
     margin: 220px auto auto;
     font-family: 'DINCon';
     font-weight: bold;
@@ -17,4 +17,8 @@
     text-align: center;
     letter-spacing: 0.013em;
     line-height: 50px;
+}
+
+.oops-none {
+    display: none;
 }

@@ -9,29 +9,42 @@ export default class AllNewsArticlesPreview extends Component {
   componentDidUpdate() {
     let doc = document.getElementById('oops')
     if(document.getElementById('doc').childNodes.length > 1) {
-      return doc.innerHTML = ''
+      return (doc.classList.add('oops-none'), doc.innerHTML = '')
     } else {
-      return doc.innerHTML = 'No Such Articles Were Found :( Maybe try something else ?'
+      return (doc.classList.remove('oops-none'), doc.innerHTML = 'No Such Articles Were Found :( Maybe try something else ?')
     }
+  }
+
+  searchSilmplifier = (searchedItem, searchInput) => {
+    return (searchedItem.toLowerCase()).match(`${searchInput.toLowerCase().trim()}`)
+  }
+
+  categorySimplifier = (searchedCategory, categoryInput) => {
+    return searchedCategory === (`${categoryInput}`)
+  }
+
+  defaultFilter = (filteredBy) => {
+    return filteredBy === ''
   }
   
   render() {
 
     let { newsInfo, search, category } = this.props
+    let { searchSilmplifier, categorySimplifier, defaultFilter } = this
 
       return (
         // Нужно будет переделать через filter()
         <div className='allNewsArticlesPreview' id='doc'>
           {newsInfo.map((article) => {
-            if(((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`)) && `${category}` === '') {
+            if ((searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search)) && defaultFilter(category)) {
               return <NewsArticle {...article} />
             } 
             
-            if(article.category === (`${category}`) && ((article.title.toLowerCase()).match(`${search.toLowerCase()}`) || (article.text.toLowerCase()).match(`${search.toLowerCase()}`))) {
+            if (categorySimplifier(article.category ,category) && (searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search))) {
               return <NewsArticle {...article} />
             } 
             
-            if(article.category === (`${category}`) && `${search}` === '') {
+            if (categorySimplifier(article.category ,category) && defaultFilter(search)) {
               return <NewsArticle {...article} />
             }
             
@@ -42,7 +55,7 @@ export default class AllNewsArticlesPreview extends Component {
             }
           }
           )}
-          <div id='oops'></div>
+          <div id='oops' className='oops'></div>
       </div>
     )
   }
