@@ -4,6 +4,7 @@ import './WorkingWithLcm.scss'
 import Header from '../../elements/Header/Header'
 import PurchasingCuppingSampling from '../../elements/PurchasingCuppingSampling/PurchasingCuppingSampling';
 import GreenBlockWithButton from '../../elements/GreenBlockWithButton/GreenBlockWithButton';
+import ConactForm from '../../elements/ConactForm/ContactForm';
 
 export default class WorkingWithLcm extends Component {
 
@@ -20,6 +21,7 @@ export default class WorkingWithLcm extends Component {
         <Header pageHeaderName='Working with LCM' headers={headers} />
         <PurchasingCuppingSampling />
         <GreenBlockWithButton greenBlocks={greenBlocks} blockName='' />
+        <ConactForm formTitle='Contact Form' text />
       </div>
     )
   }

@@ -1,6 +1,8 @@
 .greenBlockWithButton {
     display: flex;
     background: #13322b;
+    width: 100%;
+    height: 100%;
 
 
     &__picture {
@@ -13,7 +15,8 @@
     &__description {
         background: #13322b;
         width: 50%;
-        margin: auto 0 auto 60px;
+        margin: auto 0;
+        padding-left: 60px;
     }
 
     &__title {
@@ -40,6 +43,11 @@
         letter-spacing: -0.013em;
         color: #fff;
         font-family: 'Source Sans Pro', sans-serif
+    }
+
+    &-wrapper {
+        width: 100%;
+    height: 100%;
     }
 }
 

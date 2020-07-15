@@ -26,15 +26,13 @@ export default class Footer extends Component {
               </div>
               <ul className="footer__list">
                 <li className="footer__list-item">
-                  <Link to="/work-in-progress" className="footer__link">Privacy policy</Link>
+                  <a className="footer__link" href="https://www.langdoncoffee.com.au/wp-content/uploads/2020/06/Website-Privacy-Policy-.pdf">Privacy policy</a>
                 </li>
                 <li className="footer__list-item">
-                  <Link to="/work-in-progress" className="footer__link">
-                    Sales terms &amp; conditions
-                  </Link>
+                  <a className="footer__link" href="https://www.langdoncoffee.com.au/wp-content/uploads/2017/04/LCM-Standard-Terms-and-Conditions-of-Sale-v2016-1.pdf">Sales terms &amp; conditions</a>
                 </li>
                 <li className="footer__list-item">
-                  <Link to="/work-in-progress" className="footer__link">contact us</Link>
+                  <Link to="/contact-us" className="footer__link">contact us</Link>
                 </li>
               </ul>
             </div>

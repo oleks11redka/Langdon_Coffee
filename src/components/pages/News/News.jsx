@@ -18,10 +18,19 @@ export default class News extends Component {
     window.scrollTo(0, 0);
   }
 
-  handleSubmit = (event) => {
+  // Функция для onSubmit
+
+  // handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   this.setState({
+  //     search: this.childRef.searchField.value
+  //   })
+  // }
+
+  handleSearch = (event) => {
     event.preventDefault()
     this.setState({
-      search: this.childRef.searchField.value
+      search: event.target.value
     })
   }
 
@@ -39,10 +48,9 @@ export default class News extends Component {
 
       return (
         <div className="news">
-          {/* <Test newsInfo={newsInfo}/> */}
           <Header pageHeaderName='News' headers={headers} />
           <NewsLetter />
-          <FilterBar search={search} category={category} handleSubmit={this.handleSubmit} categoryChange={this.categoryChange} ref={ref => this.childRef = ref} />
+          <FilterBar search={search} category={category} handleSearch={this.handleSearch} categoryChange={this.categoryChange}/>
           <AllNewsArticlesPreview newsInfo={newsInfo} search={search} category={category} />
         </div>
       )

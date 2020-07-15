@@ -36,7 +36,7 @@ export default class GreenBlockWithButton extends Component {
     let block
 
     return (
-      <div className='wrapper'>
+      <div className='greenBlockWithButton-wrapper'>
         {block = greenBlocks.filter(block => {return block.greenTitle === blockName}),
          block.map(block => {
           let requiredImage = require(`${block.greenPicture}`)
@@ -53,5 +53,5 @@ export default class GreenBlockWithButton extends Component {
       </div>
     )
   }
-  
+
 }

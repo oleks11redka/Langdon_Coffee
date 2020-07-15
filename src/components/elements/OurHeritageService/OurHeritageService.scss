@@ -1,0 +1,109 @@
+.ourHeritageService {
+    background: #F4F4F4;
+
+    &__heritage {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__service {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+
+    &__small-title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 34px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+
+    &__medium-title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        max-width: 854px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }
+}
+
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .ourHeritageService__title {
+        font-size: 52px;
+    }
+
+    .ourHeritageService__small-title {
+        font-size: 20px;
+    }
+
+    .ourHeritageService__text {
+        width: 678px;
+        font-size: 20px;
+    }
+
+    .ourHeritageService__medium-title {
+        font-size: 30px;
+    }
+    
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    
+    .ourHeritageService__title {
+        font-size: 98px;
+    }
+
+    .ourHeritageService__small-title {
+        font-size: 35px;
+    }
+
+    .ourHeritageService__text {
+        max-width: 1500px;
+        width: 1500px;
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .ourHeritageService__medium-title {
+        font-size: 40px;
+    }
+}

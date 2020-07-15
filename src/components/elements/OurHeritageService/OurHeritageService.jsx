@@ -10,9 +10,9 @@ export default class OurHeritageService extends Component {
               <h2 className='ourHeritageService__title'>Our Heritage</h2>
               <h4 className='ourHeritageService__small-title'>“We’ve been sourcing the world’s finest ingredients for over 165 years. Now it’s coffee’s turn.”</h4>
               <p className='ourHeritageService__text'>
-                Founded 5 years ago, Langdon Coffee Merchants’ heritage stretches all the way back to the Victorian goldfields when Henry Joseph Langdon arrived in Melbourne in 1852 to supply prospectors with food and other vital supplies, including coffee.
-                <br/>This merchant heritage, combined with an entrepreneurial spirit, led us to start Langdon Coffee Merchants in 2015.  As kids wil l do, we’ve flown the coop and moved into our own dedicated Cupping Lab and Coffee HQ in South Melbourne, but we still benefit from the long-term relationships with producers and exporters formed by Langdon Ingredients, and access to world-class warehousing and logistics operations.
-              </p>
+                Founded 5 years ago, Langdon Coffee Merchants’ heritage stretches all the way back to the Victorian goldfields when Henry Joseph Langdon arrived in Melbourne in 1852 to supply prospectors with food and other vital supplies, including coffee.</p>
+                <p className='ourHeritageService__text'>This merchant heritage, combined with an entrepreneurial spirit, led us to start Langdon Coffee Merchants in 2015.  As kids wil l do, we’ve flown the coop and moved into our own dedicated Cupping Lab and Coffee HQ in South Melbourne, but we still benefit from the long-term relationships with producers and exporters formed by Langdon Ingredients, and access to world-class warehousing and logistics operations.</p>
+              
             </div>
             <div className='ourHeritageService__service'>
               <h2 className='ourHeritageService__title'>Our Service</h2>
