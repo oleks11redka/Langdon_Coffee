@@ -146,6 +146,16 @@ export default class Origins extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
 
+    let wrapper = document.getElementById('wrapper')
+    wrapper.addEventListener('mouseup', e => {
+      let block = document.getElementById("popup");
+      if (!block.contains(e.target)) {
+        this.setState({
+          showPopUp: false
+        })
+      }
+    })
+
   }
 
   openPopUp = (event) => {
@@ -153,23 +163,6 @@ export default class Origins extends Component {
       showPopUp: true,
       countryClick: event.target.id
     })
-
-
-    window.addEventListener('mouseup', e => {
-      let block = document.getElementById("popup");
-      console.log(block)
-      let bc = block.childNodes
-      console.log(bc)
-      let target = e.target;
-      console.log(target)
-      if (target !== bc && target !== block) {
-        this.setState({
-          showPopUp: false
-        })
-      }
-    })
-
-
   }
 
   closePopUp = () => {

@@ -8,7 +8,7 @@ export default class MapPopUp extends Component {
     let { countryClick, country, closePopUp, showPopUp } = this.props
     let styleS = { opacity: `${showPopUp ? "1" : "0"}`, zIndex: `${showPopUp ? "1" : "-1"}` }
     return (
-      <div className="wrapper" id="wrapper">
+      <div className="wrapper" id="wrapper" style={styleS}>
         <div className="map-popup" id="popup" style={styleS} >
           <button className="popup__close" onClick={closePopUp}>&times;</button>
           <div className="popup__block">
