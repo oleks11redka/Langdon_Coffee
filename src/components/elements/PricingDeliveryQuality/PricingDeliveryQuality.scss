@@ -1,0 +1,95 @@
+.pdq {
+    background: #F4F4F4;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__picture {
+        margin-bottom: 36px;
+        width: 854px;
+        height: 356px;
+        background: url(./PricingDeliveryQuatityPitures/image.png) no-repeat;
+    }
+
+    &__title {
+        margin-bottom: 36px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        letter-spacing: 0.013em;
+        color: #13322B;
+        text-align: center;
+    }
+
+    &__text {
+        width: 854px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+        margin-bottom: 36px;
+    }
+
+    &__buttons {
+        width: 854px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+}
+
+// for medium screen  
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+
+    .pdq__title {
+        font-size: 52px;
+        width: 400px;
+    }
+
+    .pdq__picture {
+        width: 568px;
+        height: 300px;
+    }
+
+    .pdq__text {
+        width: 568px;
+        font-size: 20px;
+    }
+
+    .pdq__buttons {
+        width: 568px;
+    }
+}
+
+
+// for 4k 
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    
+    .pdq__title {
+        font-size: 98px;
+        width: 800px;
+    }
+
+    .pdq__picture {
+        width: 854px;
+        height: 300px;
+    }
+
+    .pdq__text {
+        width: 1500px;
+        font-size: 35px;
+        line-height: 55px;
+    }
+
+    .pdq__buttons {
+        width: 1500px;
+    }
+}
+
+
