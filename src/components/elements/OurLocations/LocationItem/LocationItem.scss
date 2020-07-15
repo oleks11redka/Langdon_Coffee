@@ -1,0 +1,65 @@
+.locationItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        margin-bottom: 12px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 34px;
+        letter-spacing: 0.013em;
+        text-transform: uppercase;
+        color: #13322B;
+    }
+
+    &__phone {
+        margin-bottom: 24px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 34px;
+        letter-spacing: 0.013em;
+        color: #616161
+    }
+
+    &__adress {
+        margin-bottom: 31px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 34px;
+        letter-spacing: 0.013em;
+        color: #616161
+    }
+
+    &__button {
+        margin-bottom: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 165px;
+        height: 18px;
+        text-align: center;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 20px;
+        letter-spacing: -0.013em;
+        text-transform: uppercase;
+        color: #EEA9B5;
+        fill: #EEA9B5;
+        text-decoration: none;
+
+        &:hover {
+            color: #f1788c;
+            fill: #f1788c;
+        }
+
+    }
+
+    &__svg {
+        margin-right: 18px;
+    }
+}
