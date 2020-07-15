@@ -17,8 +17,8 @@ export default class OurLocations extends Component {
       let { locations } = this.state
       return (
         <div className='ourLocations'>
-            {locations.map((location) => {
-              return <LocationItem {...location} />
+            {locations.map((location, i) => {
+              return <LocationItem {...location} key={i} />
             })}
         </div>
       )

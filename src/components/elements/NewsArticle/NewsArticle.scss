@@ -1,5 +1,9 @@
 // .newsArticleWrapper {
-//     margin-right: auto;
+    
+//     &:last-child() {
+//         display: flex;
+//         align-self: center;
+//     }
 // }
 
 .newsArticle {
@@ -218,6 +222,7 @@
         align-items: center;
         margin-top: 36px;
         cursor: pointer;
+        
         &:focus {
             outline:none;
         }

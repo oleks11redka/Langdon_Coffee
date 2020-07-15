@@ -9,9 +9,9 @@ export default class InTheNews extends Component {
       let { newsInfo } = this.props
       return (
         <div className='InTheNews'>
-           {(newsInfo.slice(-4)).map((article) => {
+           {(newsInfo.slice(-4)).map((article, i) => {
               return (
-                <NewsArticle {...article} />
+                <NewsArticle {...article} key={i} />
               );
             })}
         </div>

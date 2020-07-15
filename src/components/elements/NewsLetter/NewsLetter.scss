@@ -6,6 +6,7 @@
     align-items: center;
     padding: 100px 0;
     transition: .3s;
+    position: relative;
 
     &__title {
         margin-bottom: 16px;
@@ -39,13 +40,20 @@
         outline: 0;
         color: #13322B;
         transition: .5s;
+        z-index: 1;
+
+        &::placeholder {
+            transition: .5s;
+        }
 
         &:focus {
             transition: 1s;
             border: 1px solid #EEA9B5;
+
+
             &::placeholder {
                 color: #eea9b470;
-                transition: 1s;
+                transition: .5s;
             }
         }
 
@@ -58,6 +66,7 @@
     }
 
     &__button {
+        outline: none;
         position: absolute;
         right: 2px;
         top: 2px;
@@ -77,6 +86,7 @@
         font-family: "DINCon";
         letter-spacing: -0.013em;
         color: #fff;
+        z-index: 1;
         transition: 0.4s;
     
         &:hover {
@@ -89,6 +99,24 @@
             background: #fff;
             color: #EEA9B5;
         }
+    }
+
+    &__success {
+        color: #EEA9B5;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: "DINCon";
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 100px;
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    &__success--show {
+        opacity: 1;
+        transition: 1.2s;
+        bottom: 50px;
     }
 }
 

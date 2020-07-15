@@ -10,7 +10,7 @@
     &__search {
         width: 340px;
         height: 34px;
-        border-bottom: 1px solid #616161;
+        // border-bottom: 1px solid #616161;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -25,12 +25,23 @@
             letter-spacing: -0.013em;
             color: #616161;
             padding-bottom: 8px;
+            transition: .3s;
+
+            &::placeholder {
+                transition: .3s;
+            }
+
+            &:focus {
+                &::placeholder {
+                    color: #c0c0c0;
+                    transition: .3s;
+                }
+            }
         }
 
         &-button {
             width: 16px;
             height: 16px;
-            cursor: pointer;
         }
     }
 
@@ -72,5 +83,7 @@
 
     select {
         outline: none;
+        -webkit-appearance:none;
+        border-radius: 0;
     }
 }
