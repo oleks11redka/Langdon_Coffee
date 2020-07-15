@@ -10,11 +10,11 @@ import Header from "../../elements/Header/Header";
 
 export default class Origins extends Component {
   state = {
-
+    showPopUp: false,
     country: [
       {
         countryName: "Brazil", countryInfo: `
-      <p class="text"><span>Country:</span> Brazil<p>
+      <p><span>Country:</span> Brazil<p>
       </br>
       <p><span>Geography:<span> 500 – 1700 masl</p>
       </br>
@@ -140,22 +140,46 @@ export default class Origins extends Component {
       We offer lot specific selection of regional blenders and the opportunity to cup and assess all coffees we have access to through our valued partners on the ground. Customisable bag sizes range from 35kg to metric tonne bulk bags.</p>`
       }
     ],
-
-
-
     countryClick: ""
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
-  }
 
+  }
 
   openPopUp = (event) => {
     this.setState({
+      showPopUp: true,
       countryClick: event.target.id
     })
+
+
+    window.addEventListener('mouseup', e => {
+      let block = document.getElementById("popup");
+      console.log(block)
+      let bc = block.childNodes
+      console.log(bc)
+      let target = e.target;
+      console.log(target)
+      if (target !== bc && target !== block) {
+        this.setState({
+          showPopUp: false
+        })
+      }
+    })
+
+
   }
+
+  closePopUp = () => {
+    this.setState({
+      showPopUp: false
+    })
+  }
+
+
+
 
   render() {
 
@@ -167,7 +191,7 @@ export default class Origins extends Component {
         <Map openPopUp={this.openPopUp} />
         <OurCredentials />
         <CoffeeHarvestCalendar />
-        <MapPopUp countryClick={this.state.countryClick} country={this.state.country} />
+        <MapPopUp countryClick={this.state.countryClick} country={this.state.country} closePopUp={this.closePopUp} showPopUp={this.state.showPopUp} />
       </div>
     )
   }
