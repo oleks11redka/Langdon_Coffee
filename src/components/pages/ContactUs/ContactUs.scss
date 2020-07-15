@@ -1,0 +1,66 @@
+.contactUs {
+    
+    background: #F4F4F4;
+
+    &__info {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__small-title {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        padding-bottom: 100px;
+        width: 854px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.013em;
+        color: #13322B;
+    }
+}
+
+
+// for laptop screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .contactUs__small-title {
+        font-size: 35px;
+    }
+
+    .contactUs__text {
+        width: 678px;
+        font-size: 20px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
+    
+    .contactUs__small-title {
+        font-size: 72px;
+        line-height: 100px;
+        width: 1250px;
+        font-size: 98px;
+    }
+
+    .contactUs__text {
+        max-width: 1500px;
+        width: 1500px;
+        font-size: 35px;
+        line-height: 40px;
+    }
+}

@@ -5,9 +5,9 @@ import './AllNewsArticlesPreview.scss'
 import NewsArticle from '../NewsArticle/NewsArticle'
 
 export default class AllNewsArticlesPreview extends Component {
-    render() {
+  render() {
 
-      let { newsInfo, search, category } = this.props
+    let { newsInfo, search, category } = this.props
 
       return (
         // Нужно будет переделать через filter()
@@ -30,8 +30,9 @@ export default class AllNewsArticlesPreview extends Component {
                 return <NewsArticle {...article} />
               })}
             }
-          })}
-        </div>
-      )
-    }
+          }
+          )}
+      </div>
+    )
+  }
 }
