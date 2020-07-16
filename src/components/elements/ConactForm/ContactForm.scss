@@ -135,6 +135,7 @@
         display: inline-block;
         border: none;
         outline: none;
+        z-index: 1;
 
         &:hover {
             background: #f1788c;
@@ -153,7 +154,7 @@
         font-family: "DINCon";
         text-transform: uppercase;
         position: absolute;
-        bottom: 100px;
+        bottom: 0;
         opacity: 0;
         transition: 1.2s;
     }
@@ -161,7 +162,7 @@
     &__success--show {
         opacity: 1;
         transition: 1.2s;
-        bottom: 50px;
+        bottom: -50px;
     }
 }
 

@@ -33,7 +33,6 @@ export default class AllNewsArticlesPreview extends Component {
     let { searchSilmplifier, categorySimplifier, defaultFilter } = this
 
       return (
-        // Нужно будет переделать через filter()
         <div className='allNewsArticlesPreview' id='doc'>
           {newsInfo.map((article, i) => {
             if ((searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search)) && defaultFilter(category)) {

@@ -17,6 +17,7 @@
     transition: .3s;
     
     &__photo{
+        background: center;
         display: flex;
         justify-content: flex-end;
         background-size: cover;
@@ -197,6 +198,7 @@
     }
 
     &__photo {
+        background: center;
         margin-top: 36px;
         background-size: cover;
         height: 340px;

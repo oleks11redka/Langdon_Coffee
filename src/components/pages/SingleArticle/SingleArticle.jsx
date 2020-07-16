@@ -17,10 +17,10 @@ export default class SingleArticle extends Component {
         <div className='singleArticle '>
           <Header pageHeaderName='News' headers={headers} />
           <div className='container'>
-          {newsInfo.map((article) => {
-            if (article.id === `${articleId}`) {
+          {newsInfo.map((article, i) => {
+            if (`${article.id}-${article.title}` === `${articleId}`) {
               return (
-                <NewsArticle {...article} fullScreen />
+                <NewsArticle {...article} key={i} fullScreen />
               );
             }
           })}

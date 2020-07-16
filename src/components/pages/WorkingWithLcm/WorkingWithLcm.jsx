@@ -23,7 +23,7 @@ export default class WorkingWithLcm extends Component {
         <Header pageHeaderName='Working with LCM' headers={headers} />
         <PurchasingCuppingSampling />
         <GreenBlockWithButton greenBlocks={greenBlocks} blockName='' />
-        <ConactForm formTitle='Contact Form' text />
+        <ConactForm formTitle='Ordering' text />
         <PricingDeliveryQuality />
         <FAQ />
       </div>
