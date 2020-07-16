@@ -79,17 +79,31 @@
     border-bottom: 1px solid #616161;
 }
 
-.collapse:has(.show) > .card-header {
-    border-bottom: none;
+.card-header--border {
+    border-bottom: 1px solid #616161;
+
+    &:before {
+        padding: 5px;
+        margin-right: 14px;
+        background: url('./FAQPictures/chevron-down.svg') center no-repeat;
+        content: '';
+    }
+}
+
+.card-header--noBorder {
+    border-bottom: 1px solid #f4f4f4;
+
+    &:before {
+        padding: 5px;
+        margin-right: 14px;
+        background: url('./FAQPictures/chevron-up.svg') center no-repeat;
+        content: '';
+    }
 }
 
 .collapse:not(.show) {
     display: none;
     border-bottom: 1px solid #616161;
-
-    .accordion > .card > .card-header {
-        border-bottom: none;
-    }
 }
 
 .collapsing {
@@ -117,7 +131,6 @@
 }
 
 .card-header {
-    
     background: url(./FAQPictures/chevron-down.svg) left no-repeat;
     font-family: 'DINCon';
     font-weight: bold;
