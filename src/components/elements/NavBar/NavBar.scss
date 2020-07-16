@@ -43,59 +43,7 @@
 
   &-bar {
     display: flex;
-    @media screen and (max-width: 768px)  {
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      right: -250px;
-      width:250px;
-      height: 100%;
-      background: rgba (255, 255, 255, .9);
-      transition: .3s;
-      padding-top: 25px;
-      display: block;
-    }
   }
-
-  &__menu {
-    position: fixed;
-    top:15px;
-    right: 3%;
-    z-index: 99;
-    background: rgba (255, 255, 255, .9);
-    padding: 10px;
-    transition: .3s;
-    
-    @media screen and (max-width: 1200px) {
-      display: none;
-    }}
-
-    &__input {
-      display: none;
-  
-      &:checked {
-        + .navigation__menu {
-          width: 56px;
-          right: 250px;
-          .burger-menu {
-            span {
-              display: none;
-            }
-  
-            &::before {
-              transform: rotate(47deg);
-            }
-  
-            &::after {
-              transform: rotate(-47deg);
-            }
-          }
-        }
-        ~ .menu {
-          right: 0;
-        }
-      }
-    }
 
   &__container {
     margin-left: 54px;
@@ -104,8 +52,6 @@
     justify-content: space-between;
   }
 }
-
-
 
 // for 4k screen 
 @media screen and (min-width: 2500px) and (max-width: 4200px) {

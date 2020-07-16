@@ -24,14 +24,14 @@ export default class NavBar extends Component {
     }
   }
 
-
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
+  scrollLogo = () => {
+    window.scrollTo(0, 0);
   }
+
 
 
   render() {
@@ -39,11 +39,6 @@ export default class NavBar extends Component {
     return (
       <div className="navigation">
         <div className="navigation__container">
-          <input type="checkbox" id="menu" className="navigation__input"></input>
-          <label htmlFor="menu" className="navigation__menu">
-            <i className="burger-menu"><span></span></i>
-          </label>
-
           <ul className="navigation-bar">
             {this.state.navbar.map((item) => {
               return (
@@ -55,7 +50,7 @@ export default class NavBar extends Component {
               );
             })}
           </ul>
-          <Link to="/">
+          <Link to="/" onClick={this.scrollLogo} >
             <img id="logo"
               src={require("./NavBarPictures/logo.svg")}
               alt="logo"

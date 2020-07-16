@@ -3,6 +3,10 @@ import React, { Component } from 'react'
 import './ContactForm.scss'
 
 export default class ConactForm extends Component {
+  state = {
+    submitted: false
+  }
+
 
   formSubmit = (event) => {
     event.preventDefault()
@@ -21,6 +25,7 @@ export default class ConactForm extends Component {
   }
 
   render() {
+
     let { formTitle, text } = this.props
 
     return (
@@ -47,7 +52,7 @@ export default class ConactForm extends Component {
             <option value="Ordering beans">Ordering coffee beans</option>
             <option value="Other">Other (please specify below)</option>
           </select>
-          <input placeholder="Your message" className='contactForm__text-input contactForm__text-input-massage' type="text" name="message" id="message" />
+          <input placeholder="Your message" className='contactForm__text-input contactForm__text-input-massage' type="text" name="entry.1892682850" id="message" />
           <div className="contactForm__checkbox-block">
             <input required className='contactForm__checkbox' type="checkbox" name="policy" id="policy" />
             <label className='contactForm__policy' htmlFor="policy">I agree to <a className='contactForm__info-lcm' href="https://www.langdoncoffee.com.au/wp-content/uploads/2020/06/Website-Privacy-Policy-.pdf">privacy policy</a></label>

@@ -2,7 +2,6 @@
     background: #F4F4F4;
     max-width: 100%;
     padding-bottom: 100px;
-    position: relative;
     transition: .3s;
 
     &__title {
@@ -29,6 +28,7 @@
     }
 
     &__followingBtn {
+        width: 100%;
         display: flex;
         justify-content: center;
         text-decoration: none;

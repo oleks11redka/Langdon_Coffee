@@ -1,7 +1,20 @@
+
 .map {
-  padding-top: 150px;
+  padding-top: 40px;
   background: #f4f4f4;
   text-align: center;
+
+  &__title {
+      padding-top: 100px;
+      margin-bottom: 16px;
+      font-family: 'DINCon';
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 101px;
+      text-align: center;
+      letter-spacing: 0.013em;
+      color: #13322B;
+  }
 
   &__svg{
     width: 100%;
@@ -10,13 +23,13 @@
 }
 
 .country__color{
-  transition: .3s;
+  transition: .7s;
   fill:#B56D6A;
   cursor: pointer;
 }
 
 .country__name {
-  transition: .3s;
+  transition: .7s;
   fill:#13322B;
   cursor: pointer;
   stroke: transparent;
@@ -29,10 +42,17 @@
     fill:#730000;
   }
   .country__name {
-    fill:#e37371;
+    fill:#e96967;
   }
 }
 
+.buttons__map {
+  margin: 0 auto;
+  display: flex;
+  max-width: 400px;
+  width: 100%;
+  justify-content: space-between;
+}
 
 
 // #Frame_16 {
