@@ -88,17 +88,32 @@
     }
 }
 
-// for medium screens
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
 
-    .ourGlobalTeam__picture {
-        max-width: 305px;
+@media screen and (max-width: 1440px) {
+    .ourGlobalTeam__picturesBlock {
+        top: -100px;
+        display: flex;
+        justify-content: space-around;
     }
 
-    .ourGlobalTeam__picturesBlock {
-        top: -120px;
+    .ourGlobalTeam__country-pictures {
+        margin: 0 20px
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .ourGlobalTeam__picturesBlock {
+        top: -100px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ourGlobalTeam__country-pictures {
+        margin: 0 20px
+    }
+}
+
+
 
 // for 4k screens
 @media screen and (min-width: 2500px) and (max-width: 4200px) {

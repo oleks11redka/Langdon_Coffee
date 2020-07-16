@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactHtmlParser from 'react-html-parser';
+import GeneralButton from '../GeneralButton/GeneralButton'
 import './MapPopUp.scss'
 
 export default class MapPopUp extends Component {
@@ -19,11 +20,16 @@ export default class MapPopUp extends Component {
               if (country.countryName === countryClick) {
                 let html = country.countryInfo
                 return (
-                  <div className="popup__info" key={country.countryName}>{ReactHtmlParser(html)}</div>
+                  <div className="popup__info" key={country.countryName}>{ReactHtmlParser(html)}
+                    <div className="map-popup__button">
+                      <GeneralButton link='/contact-us' buttonName='Contact us' className="button__map" />
+                    </div></div>
+
                 )
               }
             })}
           </div>
+
         </div>
       </div>
     )
