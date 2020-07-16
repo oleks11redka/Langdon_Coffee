@@ -35,6 +35,53 @@
   height: 300px;
 }
 
+.popup__info {
+  height: 100%;
+  font-family: 'DINCon';
+  & p {
+    display: flex;
+  }
+  
+&--green {
+  background-color: #13322b ;
+  color: white;
+  padding: 20px 36px;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.013em;
+  font-weight: bold;
+
+  & p div:first-child{
+    max-width: 184px;
+    width: 100vw;
+  }
+}
+
+&--white {
+  background-color: white;
+  color: #13322b;
+  padding: 20px 36px;
+
+  
+  & p div:first-child{
+    max-width: 184px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  & p div:last-child {
+    max-width: 598px;
+    width: 100%;
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+
+}
+
+
 .popup__close {
   border: none;
   color: white;
@@ -48,4 +95,7 @@
   top: 10px;
   cursor: pointer;
   overflow: visible;
+  &:focus {
+    outline: none;
+  }
 }
