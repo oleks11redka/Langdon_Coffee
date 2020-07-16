@@ -75,11 +75,21 @@
   
 .accordion > .card > .card-header {
     border-radius: 0;
-    margin-bottom: -1px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #616161;
+}
+
+.collapse:has(.show) > .card-header {
+    border-bottom: none;
 }
 
 .collapse:not(.show) {
     display: none;
+    border-bottom: 1px solid #616161;
+
+    .accordion > .card > .card-header {
+        border-bottom: none;
+    }
 }
 
 .collapsing {
@@ -87,6 +97,16 @@
     height: 0;
     overflow: hidden;
     transition: height 0.35s ease;
+
+    padding-left: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.013em;
+    color: #13322B;
+    border-bottom: 1px solid #616161;
 }
 
 
