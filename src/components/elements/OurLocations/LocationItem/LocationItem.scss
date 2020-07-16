@@ -4,6 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 50%;
+    min-width: 350px;
     height: 180px;
     margin-bottom: 80px;
 
@@ -22,19 +23,29 @@
 
     &__phone {
         font-family: 'DINCon';
-        font-weight: bold;
+        font-weight: normal;
         font-size: 22px;
         letter-spacing: 0.013em;
-        color: #616161
+        color: #616161;
+
+        &--margin {
+            margin-right: 38px;
+            font-weight: bold;
+        }
     }
 
     &__adress {
         font-family: 'DINCon';
-        font-weight: bold;
+        font-weight: normal;
         font-size: 22px;
         letter-spacing: 0.013em;
         color: #616161;
         line-height: 32px;
+
+        &--margin {
+            margin-right: 20px;
+            font-weight: bold;
+        }
     }
 
     &__button {
