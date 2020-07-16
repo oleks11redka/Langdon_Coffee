@@ -9,9 +9,9 @@ export default class PricingDeliveryQuality extends Component {
 
     return (
       <div className='pdq'>
-        <div className='pdq__block'>
-          <div className='pdq__picture'></div>
+        <div className='pdq__block'>          
           <h2 className='pdq__title'>Pricing and Delivery</h2>
+          <div className='pdq__picture'></div>
           <p className='pdq__text'>Pricing on all stock in our Offer List is ex-warehouse, i.e. Langdon Coffee Merchants cover all sourcing, logistics, export and import duties, insurance, quality control and storage at our warehouses in Melbourne, Brisbane, Perth, Auckland, and London.</p>
           <p className='pdq__text'>Local delivery fees to your nominated facility are charged at a flat price per pallet, or we can arrange a specific quote to your location. Storage, custom packing and blending can also be arranged through Langdon Coffee Merchants</p>
           <div className='pdq__buttons'>

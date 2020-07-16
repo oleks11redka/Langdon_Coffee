@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #F4F4F4;
+    position: relative;
 
     &__title {
         margin-top: 100px;
@@ -76,14 +78,19 @@
         line-height: 26px;
         letter-spacing: -0.013em;
         color: #616161;
+        -webkit-appearance:none;
+        border-radius: 0;
     }
 
-    &__checkbox { 
+    &__checkbox {
+        width: 20px;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 2px;
 
         &-block {            
             width: 414px;
             display: flex;
-            margin-bottom: 36px;
         }
     
     }
@@ -105,29 +112,66 @@
 
     &__info-lcm {
         text-decoration: none;
-        color: #EEA9B5;;
+        color: #EEA9B5;
+        transition: .3s;
+
+        &:hover {
+            color: #f1788c;
+        }
     } 
     
     &__submit {
-        padding: 12px 32px;
+        margin-top: 50px;
+        padding: 13px 40px;
         background: #EEA9B5;
-        border: 1px solid #FFFFFF;
-        box-sizing: border-box;
         border-radius: 2px;
-        font-family: 'DINCon';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 25px;
-        line-height: 20px;
-        letter-spacing: -0.013em;
         text-transform: uppercase;
-        color: #FFFFFF;
-        transition: .3s;
-        margin-bottom: 100px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "DINCon";
+        letter-spacing: -0.013em;
+        color: #fff;
+        transition: 0.4s;
+        display: inline-block;
+        border: none;
+        outline: none;
+        z-index: 1;
 
         &:hover {
             background: #f1788c;
         }
+
+        &:active {
+            background: #fff;
+            color: #EEA9B5;
+        }
+    }
+
+    &__success {
+        color: #EEA9B5;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: "DINCon";
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        transition: 1.2s;
+    }
+
+    &__success--show {
+        opacity: 1;
+        transition: 1.2s;
+        bottom: -50px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .contactForm__text {
+        width: 678px;
     }
 }
 

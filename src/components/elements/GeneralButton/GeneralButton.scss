@@ -1,31 +1,19 @@
 .generalButton {
-    margin-top: 58px;
-    width: 194px;
-    height: 44px;
+    margin-top: 50px;
+    padding: 13px 20px;
     background: #EEA9B5;
     border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    line-height: 20px;
     font-family: "DINCon";
     letter-spacing: -0.013em;
     color: #fff;
     transition: 0.4s;
-
-    a {
-        text-decoration: none;
-        color: #fff;
-        outline:none;
-
-        &*,*:focus,*:hover{
-            outline:none;
-        }
-    }
+    display: inline-block;
+    outline: none;
+    border: none;
 
     &:hover {
         background: #f1788c;

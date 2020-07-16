@@ -1,6 +1,20 @@
 .faq {
-    max-width: 600px;
-    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+
+    &__title {
+        margin-top: 100px;
+        margin-bottom: 36px;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 101px;
+        text-align: center;
+        letter-spacing: 0.013em;
+        color: #13322B;
+    }
 }
 
 .accordion > .card {
@@ -29,12 +43,12 @@
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
+    // min-width: 0;
+    // word-wrap: break-word;
+    // background-color: #fff;
+    // background-clip: border-box;
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    // border-radius: 0.25rem;
   }
   
 .card-body {
@@ -47,7 +61,7 @@
     padding: 0.75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125)
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.125)
 }
 
 .card-header:first-child {
@@ -73,6 +87,38 @@
     height: 0;
     overflow: hidden;
     transition: height 0.35s ease;
+}
+
+
+.accordion {
+    width: 854px;
+    background: #f4f4f4;
+    margin-bottom: 100px;
+}
+
+.card-header {
+    
+    background: url(./FAQPictures/chevron-down.svg) left no-repeat;
+    font-family: 'DINCon';
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 34px;
+    letter-spacing: 0.013em;
+    color: #13322B;
+    background: #f4f4f4;
+    padding-bottom: 26px;
+}
+
+.collapse {
+    padding-left: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.013em;
+    color: #13322B;
+    border-bottom: 1px solid #616161;
 }
   
 @media (prefers-reduced-motion: reduce) {

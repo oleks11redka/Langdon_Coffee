@@ -1,0 +1,85 @@
+.locationItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 180px;
+    margin-bottom: 80px;
+
+    &:nth-child(2n) {
+        padding-left: 20px;
+    }
+
+    &__title {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 0.013em;
+        text-transform: uppercase;
+        color: #13322B;
+    }
+
+    &__phone {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 0.013em;
+        color: #616161
+    }
+
+    &__adress {
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 0.013em;
+        color: #616161;
+        line-height: 32px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        height: 18px;
+        text-align: center;
+        font-family: 'DINCon';
+        font-weight: bold;
+        font-size: 25px;
+        letter-spacing: -0.013em;
+        text-transform: uppercase;
+        color: #EEA9B5;
+        fill: #EEA9B5;
+        text-decoration: none;
+        transition: .3s;
+
+        &:hover {
+            color: #f1788c;
+            fill: #f1788c;
+
+            .locationItem__svg {
+                fill: #f1788c;
+            }
+        }
+
+    }
+
+    &__svg {
+        transition: .3s;
+        fill: #EEA9B5;
+        margin-right: 18px;
+        margin-left: -8px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .locationItem {
+        width: 100%;
+
+        &:nth-child(2n) {
+            padding-left: 0;
+        }
+    }
+}

@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { withRouter, Link } from "react-router-dom";
+import ReactHtmlParser from 'react-html-parser';
 
 import './NewsArticle.scss'
 
@@ -27,7 +28,7 @@ class NewsArticle extends Component {
             )
         } else {
             news = (
-            <div className='newsArticle' onClick={() => {history.push('/news/' + id)}}>
+            <div className='newsArticle' onClick={() => {history.push(`/news/${id}-${title}`)}}>
                 <div className='newsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
                     <p className={`newsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
                 </div>

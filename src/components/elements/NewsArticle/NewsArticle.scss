@@ -1,5 +1,9 @@
 // .newsArticleWrapper {
-//     margin-right: auto;
+    
+//     &:last-child() {
+//         display: flex;
+//         align-self: center;
+//     }
 // }
 
 .newsArticle {
@@ -13,6 +17,7 @@
     transition: .3s;
     
     &__photo{
+        background: center;
         display: flex;
         justify-content: flex-end;
         background-size: cover;
@@ -193,6 +198,7 @@
     }
 
     &__photo {
+        background: center;
         margin-top: 36px;
         background-size: cover;
         height: 340px;
@@ -218,6 +224,7 @@
         align-items: center;
         margin-top: 36px;
         cursor: pointer;
+        
         &:focus {
             outline:none;
         }
