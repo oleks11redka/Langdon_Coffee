@@ -5960,7 +5960,7 @@ export default class Map extends Component {
           </svg>
         </div>
         <div className="buttons__map">
-          <GeneralButton link='/contact-us' buttonName='Request a sample' className="button__map" />
+          <GeneralButton link='/contact-us' buttonName='Contact us' className="button__map" />
           <GeneralButton urlLink='https://www.langdoncoffee.com.au/wp-content/uploads/2020/07/JULYv2-2020-Global-Offers-List-110520.pdf' buttonName='View offers list' />
         </div>
       </div>

@@ -13,7 +13,7 @@ import SingleArticle from "../pages/SingleArticle/SingleArticle";
 import Footer from "../elements/Footer/Footer";
 
 import "./App.scss";
-import Test from "../Alex/Test/Test";
+// import Test from "../Alex/Test/Test";
 // import Test from "../illya/Test";
 
 export default class App extends Component {
