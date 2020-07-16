@@ -10,6 +10,7 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import AboutLcm from "../pages/AboutLcm/AboutLcm";
 import WorkingWithLcm from "../pages/WorkingWithLcm/WorkingWithLcm";
 import SingleArticle from "../pages/SingleArticle/SingleArticle";
+import Footer from "../elements/Footer/Footer";
 
 import "./App.scss";
 // import Test from "../Alex/Test/Test";
@@ -69,6 +70,7 @@ export default class App extends Component {
             return <SingleArticle newsInfo={newsInfo} articleId={id} headers={headers} />
           }}
         />
+        <Footer />
       </Router>
     );
   }
