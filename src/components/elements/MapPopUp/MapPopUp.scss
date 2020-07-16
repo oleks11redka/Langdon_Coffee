@@ -80,8 +80,6 @@
 }
 
 }
-
-
 .popup__close {
   border: none;
   color: white;
@@ -98,4 +96,9 @@
   &:focus {
     outline: none;
   }
+}
+
+.map-popup__button {
+  text-align: center;
+  padding-bottom: 50px;
 }
