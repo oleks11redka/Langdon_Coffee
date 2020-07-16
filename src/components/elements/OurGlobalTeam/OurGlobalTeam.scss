@@ -36,7 +36,7 @@
 
     &__picturesBlock {
         position: relative;
-        top: -200px;
+        top: -140px;
         display: flex;
         justify-content: space-between;
         max-width: 80%;
@@ -50,8 +50,7 @@
     }
 
     &__picture {
-        max-width: 445px;
-        max-height: 332px;
+        max-width: 360px;
     }
 
     &__country {
