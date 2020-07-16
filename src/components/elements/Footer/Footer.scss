@@ -104,13 +104,18 @@
 }
 
 // for 4k screen 
-@media screen and (min-width: 3700px) and (max-width: 4200px) {
+@media screen and (min-width: 2500px) and (max-width: 4200px) {
   .footer {
     max-width: 100%;
     height: 900px;
 
     &__pictureTitle {
       height: 600px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__picture {

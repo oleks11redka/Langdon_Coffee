@@ -106,3 +106,20 @@
         }
     }
 }
+
+
+// for mobile screen 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    
+    .greenBlockWithButton {
+        flex-direction: column-reverse;
+    }
+
+    .greenBlockWithButton__text {
+        width: 250px;
+    }
+
+    .greenBlockWithButton__title {
+        width: 250px;
+    }
+  }
