@@ -1,5 +1,6 @@
 .pdq {
     background: #F4F4F4;
+    padding-top: 100px;
 
     &__block {
         display: flex;
@@ -37,9 +38,9 @@
     }
 
     &__buttons {
-        width: 854px;
+        width: 540px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 100px;
     }
 }
