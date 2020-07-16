@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #F4F4F4;
     position: relative;
 
     &__title {
@@ -163,6 +164,14 @@
         opacity: 1;
         transition: 1.2s;
         bottom: -50px;
+    }
+}
+
+// for 4k screens
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .contactForm__text {
+        width: 678px;
     }
 }
 
