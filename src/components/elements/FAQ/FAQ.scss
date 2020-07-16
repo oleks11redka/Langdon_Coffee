@@ -76,30 +76,41 @@
 .accordion > .card > .card-header {
     border-radius: 0;
     margin-bottom: 1px;
-    border-bottom: 1px solid #616161;
+    // border-bottom: 1px solid #616161;
 }
 
 .card-header--border {
     border-bottom: 1px solid #616161;
+    transition: .5s;
+    position: relative;
 
-    &:before {
-        padding: 5px;
-        margin-right: 14px;
+    &:after {
+        position: absolute;
+        right: 0;
+        padding: 27px;
         background: url('./FAQPictures/chevron-down.svg') center no-repeat;
         content: '';
+        transition: .1s;
     }
 }
 
 .card-header--noBorder {
     border-bottom: 1px solid #f4f4f4;
+    transition: .2s;
+    position: relative;
 
-    &:before {
-        padding: 5px;
-        margin-right: 14px;
+    &:after {
+        position: absolute;
+        right: 0;
+        padding: 27px;
         background: url('./FAQPictures/chevron-up.svg') center no-repeat;
+        // transform: scale(-1);
         content: '';
+        transition: .1s;
     }
 }
+
+// url('./FAQPictures/chevron-up.svg') center no-repeat;
 
 .collapse:not(.show) {
     display: none;
