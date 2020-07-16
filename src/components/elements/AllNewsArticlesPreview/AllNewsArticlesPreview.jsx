@@ -13,11 +13,14 @@ export default class AllNewsArticlesPreview extends Component {
 
   componentDidUpdate() {
     let doc = document.getElementById('oops')
+    let button = document.getElementById('show-more')
 
     if(document.getElementById('doc').childNodes.length > 2) {
       doc.classList.add('oops-none')
+      button.classList.remove('show-more--disabled')
     } else {
       doc.classList.remove('oops-none')
+      button.classList.add('show-more--disabled')
     }
   }
 
