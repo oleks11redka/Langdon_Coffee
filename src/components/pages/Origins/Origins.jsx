@@ -155,7 +155,7 @@ export default class Origins extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
 
     // Функция закрытия Map-Popup по клику за пределами его области
     let wrapper = document.getElementById('wrapper-popup')

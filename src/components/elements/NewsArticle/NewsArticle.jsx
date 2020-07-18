@@ -28,7 +28,7 @@ class NewsArticle extends Component {
             )
         } else {
             news = (
-            <div className='newsArticle' onClick={() => {history.push(`/news/${id}-${title}`)}}>
+            <div className='newsArticle' onClick={() => {history.push(`/news/id=${id}&title=${title}`)}}>
                 <div className='newsArticle__photo' style={{ backgroundImage: `url(${requiredImage})` }}>
                     <p className={`newsArticle__category newsArticle__category--${category.split(' ').join('').toLowerCase()}`}>{category}</p>
                 </div>

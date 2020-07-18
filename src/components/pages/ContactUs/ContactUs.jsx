@@ -9,7 +9,7 @@ import OurLocations from '../../elements/OurLocations/OurLocations';
 export default class ContactUs extends Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   render() {

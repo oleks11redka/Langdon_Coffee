@@ -11,7 +11,7 @@ import FAQ from '../../elements/FAQ/FAQ';
 export default class WorkingWithLcm extends Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   render() {

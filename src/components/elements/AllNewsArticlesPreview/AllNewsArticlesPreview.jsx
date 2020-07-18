@@ -8,81 +8,88 @@ export default class AllNewsArticlesPreview extends Component {
 
   state = {
     numberOfArticles: 8,
-    showMore: true
   }
 
-  componentDidUpdate() {
-    let doc = document.getElementById('oops')
-    let button = document.getElementById('show-more')
+  componentWillReceiveProps() {
+    let showMoreButton = document.getElementById('show-more')
 
-    if(document.getElementById('doc').childNodes.length > 2) {
-      doc.classList.add('oops-none')
-      button.classList.remove('show-more--disabled')
-    } else {
-      doc.classList.remove('oops-none')
-      button.classList.add('show-more--disabled')
+    this.setState({
+      numberOfArticles: 8
+    })
+
+    showMoreButton.classList.remove('show-more--disabled')
+  }
+  
+  componentDidUpdate() {
+    let oopsAlert = document.getElementById('oops')
+    let showMoreButton = document.getElementById('show-more')
+    let previewLength = document.getElementById('doc').childNodes.length
+
+    if(previewLength == 1) {
+      oopsAlert.classList.remove('oops-none')
+      showMoreButton.classList.add('show-more--disabled')
+    }
+
+    if(previewLength > 1) {
+      oopsAlert.classList.add('oops-none')
+    }
+
+    if(previewLength > 1 && previewLength <= 8) {
+      showMoreButton.classList.add('show-more--disabled')
     }
   }
 
-  searchSilmplifier = (searchedItem, searchInput) => {
-    return (searchedItem.toLowerCase()).match(`${searchInput.toLowerCase().trim()}`)
-  }
+  showMoreFunction = (filteredNumber) => {
+    let showMoreButton = document.getElementById('show-more')
+    let presentArticlesCount = this.state.numberOfArticles
 
-  categorySimplifier = (searchedCategory, categoryInput) => {
-    return searchedCategory === (`${categoryInput}`)
-  }
+    this.setState({
+      numberOfArticles: presentArticlesCount + 4
+    })
 
-  defaultFilter = (filteredBy) => {
-    return filteredBy === ''
-  }
-
-  showMore = (count) => {
-    let button = document.getElementById('show-more')
-    let previewLength = document.getElementById('doc').childNodes.length
-    console.log(previewLength)
-
-    if (previewLength >= 1 + count) {
-      console.log(count)
-      this.setState({
-        numberOfArticles: this.state.numberOfArticles + 4,
-      })
-    } else {
-      button.classList.add('show-more--disabled')
+    if(presentArticlesCount >= filteredNumber - 4) {
+      showMoreButton.classList.add('show-more--disabled')
     }
   }
   
   render() {
-
     let { newsInfo, search, category } = this.props
     let { numberOfArticles } = this.state
-    let { searchSilmplifier, categorySimplifier, defaultFilter } = this
+
+    let filteredNews = newsInfo.filter((article) => {
+
+      let searchSilmplifier = (searchedItem, searchInput) => {
+        return (searchedItem.toLowerCase()).match(`${searchInput.toLowerCase().trim()}`)
+      }
     
+      let categorySimplifier = (searchedCategory, categoryInput) => {
+        return searchedCategory === (`${categoryInput}`)
+      }
+
+      if(search !== '' && category !== '') {
+        return ((searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search)) && categorySimplifier(article.category ,category))
+      } if (search !== '' && category === '') {
+        return (searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search))
+      } if (search === '' && category !== '') {
+        return categorySimplifier(article.category ,category)
+      } if (search === '' && category === '') {
+        return  newsInfo
+      }
+    })
+
+    let news = filteredNews.reverse().slice(0, numberOfArticles).map((article, i) => {
+      return <NewsArticle {...article} key={i} />
+    })
+
       return (
         <div className='allNewsArticlesPreview__wrapper'>
           <div className='allNewsArticlesPreview' id='doc'>
-          
-          {newsInfo.slice(0, numberOfArticles).map((article, i) => {
-            if ((searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search)) && defaultFilter(category)) {
-              return <NewsArticle {...article} key={i} />
-            } 
-            
-            if (categorySimplifier(article.category ,category) && (searchSilmplifier(article.title, search) || searchSilmplifier(article.text, search))) {
-              return <NewsArticle {...article} key={i} />
-            } 
-            
-            if (categorySimplifier(article.category ,category) && defaultFilter(search)) {
-              return <NewsArticle {...article} key={i} />
-            }
-            else {
-              {newsInfo.slice(0, numberOfArticles).map((article, i) => {
-                return <NewsArticle {...article} key={i} />
-              })}
-            }
-          }
-          )}
-          <div id='oops' className='oops oops-none'>No Such Articles Were Found :( Maybe try something else ?</div>
-      </div>
-          <button className='show-more' id='show-more' onClick={() => this.showMore(numberOfArticles)}>Show More</button>
+              {news}
+            <div id='oops' className='allNewsArticlesPreview__oops oops-none'>No Such Articles Were Found :&#40; Maybe try something else ?</div>
+          </div>
+          <div className='allNewsArticlesPreview__button-wrapper'>
+            <button className='allNewsArticlesPreview__show-more' id='show-more' onClick={() => this.showMoreFunction(filteredNews.length, search, category)}>Show More</button>
+          </div>
         </div>
     )
   }

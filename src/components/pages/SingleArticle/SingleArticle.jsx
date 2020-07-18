@@ -8,7 +8,7 @@ import Header from '../../elements/Header/Header';
 export default class SingleArticle extends Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   } 
   
     render() {
@@ -18,7 +18,7 @@ export default class SingleArticle extends Component {
           <Header pageHeaderName='News' headers={headers} />
           <div className='container'>
           {newsInfo.map((article, i) => {
-            if (`${article.id}-${article.title}` === `${articleId}`) {
+            if (`id=${article.id}&title=${article.title}` === `${articleId}`) {
               return (
                 <NewsArticle {...article} key={i} fullScreen />
               );

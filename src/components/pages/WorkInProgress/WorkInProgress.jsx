@@ -6,7 +6,7 @@ import './WorkInProgress.scss'
 export default class WorkInProgress extends Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
     render() {

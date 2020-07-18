@@ -9,7 +9,7 @@ export default class FilterBar extends Component {
 
       return (
         <div className='filterBar'>
-          <form className='filterBar__search' style={{ borderBottom: (search.trim() !== '' ? '1px solid #EEA9B5' : '1px solid #616161') }}> 
+          <form className='filterBar__search' style={{ borderBottom: (search.trim() !== '' ? '1px solid #EEA9B5' : '1px solid #616161') }} onSubmit={(event) => event.preventDefault()}> 
             <input className='filterBar__search-field' name="searchField" type="text" placeholder="Search for news" value={search} onChange={handleSearch}/>
             <img className='filterBar__search-button' src={require("./FilterBarPicture/search.svg")} alt="search logo"/>
           </form>

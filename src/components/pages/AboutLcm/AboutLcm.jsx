@@ -11,7 +11,7 @@ import GreenBlockWithButton from '../../elements/GreenBlockWithButton/GreenBlock
 export default class AboutLcm extends Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   render() {

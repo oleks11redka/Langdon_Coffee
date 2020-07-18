@@ -15,7 +15,7 @@ export default class News extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   // Функция для onSubmit
